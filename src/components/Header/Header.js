@@ -1,14 +1,24 @@
 import React from 'react'
-import './header.css'
+import HeaderCss from './header.module.css'
 import Logo from '../../assets/Logo.svg'
+
+
+
+
+
 const Header = () => {
+
+const {header,nav,headerLogo,navList} = HeaderCss
+
+
+
   return (
-    <header>
-       <nav>
-        <figure>
-       <img src={Logo} alt="" />
+    <header className={header}>
+       <nav className={nav}>
+        <figure className={headerLogo}>
+       <img src={Logo} alt="Restaurant Logo" />
         </figure>
-          <ul>
+          <ul className={navList}>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Menu</a></li>

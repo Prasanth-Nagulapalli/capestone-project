@@ -1,0 +1,112 @@
+import React from "react";
+import { useState } from "react";
+import TestimonalsCss from "./testimonials.module.css";
+import groot from "../../assets/groot.jpg";
+import superMan from "../../assets/superman.jpg";
+import stefan from "../../assets/Štefan Štefančík.jpg";
+import Jake from "../../assets/Jake Nackos.jpg";
+const {
+  testimonialSection,
+  card,
+  ratingSection,
+  sectionCenter,
+  figure,
+  textContent,
+  figCaption,
+  cardAnimation,
+} = TestimonalsCss;
+
+const reviewData = [
+  {
+    id: "abc",
+    name: "Groot",
+    img: groot,
+    review: "Delicious food served in a cozy ambiance, great experience.",
+  },
+  {
+    id: "cca",
+    name: "Superman",
+    img: superMan,
+    review: "Tasty dishes, cozy vibe, highly recommended spot.",
+  },
+  {
+    id: "zzz",
+    name: "Štefan Štefančík",
+    img: stefan,
+    review: "Yummy food, friendly staff, definitely worth trying.",
+  },
+  {
+    id: "www",
+    name: "Jake Nackos",
+    img: Jake,
+    review:
+      "Outstanding cuisine, attentive staff, perfect spot for any occasion.",
+  },
+];
+
+const Testimonials = () => {
+  const [isHovered, setIsHovered] = useState(null);
+
+  const handleMouse = (id) => {
+    setIsHovered(id);
+    console.log("Mouse Entered");
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(null);
+  };
+
+  return (
+    <section className={testimonialSection}>
+      <h1>Testimonials</h1>
+      <section className={sectionCenter}>
+        {reviewData.map((item) => {
+          const { id, name, img, review } = item;
+          return (
+            <article className={card} key={id}>
+              <figure
+                className={figure}
+                onMouseEnter={() => handleMouse(id)}
+                onMouseLeave={handleMouseLeave}
+              >
+                <img
+                  src={img}
+                  alt={name}
+                  className={`${isHovered === id ? cardAnimation : ""}`}
+                />
+                <figcaption className={figCaption}>
+                  <h2> {name}</h2>
+                </figcaption>
+              </figure>
+              <div className={textContent}>
+                <h2>Review</h2>
+                <blockquote>{review}</blockquote>
+              </div>
+              <section className={ratingSection}>
+                <h2>Rating </h2>
+
+                <span>
+                  <i className="fa-solid fa-star"></i>
+                </span>
+                <span>
+                  <i className="fa-solid fa-star"></i>
+                </span>
+                <span>
+                  <i className="fa-solid fa-star"></i>
+                </span>
+                <span>
+                  <i className="fa-solid fa-star"></i>
+                </span>
+                <span>
+                  <i className="fa-solid fa-star"></i>
+                </span>
+              </section>
+            </article>
+          );
+        })}
+      </section>
+    </section>
+  );
+};
+
+export default Testimonials;

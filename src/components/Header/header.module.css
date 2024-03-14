@@ -1,0 +1,40 @@
+.header{
+    width: 100%;
+    margin: 0.4rem 0 1.4rem;
+}
+
+.nav {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    
+}
+
+.headerLogo img{
+    width: 20rem;
+    transform: translateY(0.3rem);
+}
+
+.navList{
+    display: flex;
+}
+
+.navList li{
+    list-style-type: none;
+    font-size: 2rem;
+    margin-right: 2.8rem;
+    font-weight: 500;  
+    
+}
+
+.navList li:last-child{
+    margin-right: 0;
+}
+
+.navList li a{
+    text-decoration: none;
+    color: black;
+}

@@ -1,25 +1,28 @@
 import React from "react";
-import "./card.css";
+import cardCss from "./card.module.css";
+
+const {card,cardImage,cardContent,cardHeadingPrice,cardTitle,cardPrice,cardDescription,orderDelivery,orderTitle} = cardCss
+
 
 const Card = ({ id, img, heading, price, description }) => {
   return (
-    <article className="card" key={id}>
-      <figure className="card-image">
-        <img src={img} alt="Greek Salad" />
+    <article className={card} id={id}>
+      <figure className={cardImage}>
+        <img src={img} alt={heading} />
       </figure>
-      <section className="card-content">
-        <header className="card-heading-price">
-          <h2 className="card-title">{heading}</h2>
-          <span className="card-price">{price}</span>
+      <section className={cardContent}>
+        <header className={cardHeadingPrice}>
+          <h2 className={cardTitle}>{heading}</h2>
+          <span className={cardPrice}>{price}</span>
         </header>
 
-        <p className="card-description">{description}</p>
+        <p className={cardDescription}>{description}</p>
 
-        <div className="order-delivery">
-          <h2 className="order-title">Order a delivery</h2>
+        <div className={orderDelivery}>
+          <h2 className={orderTitle}>Order a delivery</h2>
 
           <button>
-            <i class="fa-solid fa-car-side"></i>
+            <i className="fa-solid fa-car-side"></i>
           </button>
         </div>
       </section>
