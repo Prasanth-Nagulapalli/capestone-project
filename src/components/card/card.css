@@ -1,0 +1,90 @@
+.card {
+  width: 265px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 3fr;
+  row-gap: 2rem;
+  flex-wrap: wrap;
+  background-color: #edefee;
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.card-image {
+  overflow: hidden;
+}
+
+.card-image img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.25s;
+}
+
+.card:hover .card-image img {
+  transform: scale(1.07);
+}
+
+.card-content {
+  width: 100%;
+  height: 100%;
+  padding: 0.8rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  z-index: 20;
+  background-color: #edefee;
+}
+
+.card-heading-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif, "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif, "Arial Narrow", Arial, sans-serif, Courier,
+    monospace;
+}
+
+.card-price {
+  font-size: 1.6rem;
+  color: #ee9972;
+}
+
+.card-description {
+  font-size: 1.6rem;
+  color: #495e57;
+  margin-bottom: 1.2rem;
+}
+
+.order-delivery {
+  color: rgba(0, 0, 0, 0.89);
+  display: flex;
+
+  gap: 2rem;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.order-title {
+  font-size: 1.6rem;
+}
+
+.order-delivery button {
+  border: none;
+  display: block;
+  transform: translateY(0.3rem);
+}
