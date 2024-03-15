@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import TestimonalsCss from "./testimonials.module.css";
 import groot from "../../assets/groot.jpg";
 import superMan from "../../assets/superman.jpg";
@@ -13,7 +12,6 @@ const {
   figure,
   textContent,
   figCaption,
-  cardAnimation,
 } = TestimonalsCss;
 
 const reviewData = [
@@ -45,17 +43,6 @@ const reviewData = [
 ];
 
 const Testimonials = () => {
-  const [isHovered, setIsHovered] = useState(null);
-
-  const handleMouse = (id) => {
-    setIsHovered(id);
-    console.log("Mouse Entered");
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(null);
-  };
-
   return (
     <section className={testimonialSection}>
       <h1>Testimonials</h1>
@@ -64,16 +51,8 @@ const Testimonials = () => {
           const { id, name, img, review } = item;
           return (
             <article className={card} key={id}>
-              <figure
-                className={figure}
-                onMouseEnter={() => handleMouse(id)}
-                onMouseLeave={handleMouseLeave}
-              >
-                <img
-                  src={img}
-                  alt={name}
-                  className={`${isHovered === id ? cardAnimation : ""}`}
-                />
+              <figure className={figure}>
+                <img src={img} alt={name} />
                 <figcaption className={figCaption}>
                   <h2> {name}</h2>
                 </figcaption>
@@ -84,7 +63,6 @@ const Testimonials = () => {
               </div>
               <section className={ratingSection}>
                 <h2>Rating </h2>
-
                 <span>
                   <i className="fa-solid fa-star"></i>
                 </span>

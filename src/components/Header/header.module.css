@@ -30,6 +30,7 @@
     
 }
 
+
 .navList li:last-child{
     margin-right: 0;
 }
@@ -37,4 +38,8 @@
 .navList li a{
     text-decoration: none;
     color: black;
+    transition: 0.25s;
 }
+    .navList li a:hover{
+      color: rgb(51, 255, 0);
+    }
