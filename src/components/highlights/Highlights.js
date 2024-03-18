@@ -1,9 +1,7 @@
 import React from "react";
 import highlightsCss from "./highlights.module.css";
 import Card from "../card/Card";
-import Greeksalad from "../../assets/greek salad.jpg";
-import LemonDessert from "../../assets/lemon dessert.jpg";
-import bruchetta from "../../assets/bruchetta.svg";
+import { Greeksalad, LemonDessert, bruchetta } from "../../utils";
 
 const data = [
   {

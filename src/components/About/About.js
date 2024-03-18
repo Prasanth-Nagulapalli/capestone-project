@@ -1,7 +1,6 @@
 import React from "react";
 import aboutCss from "./about.module.css";
-import rest1 from "../../assets/restaurant1.jpg";
-import rest2 from "../../assets/restaurant2.jpg";
+import {rest1, rest2} from '../../utils'
 
 const About = () => {
   const { about, textContent, imageContent, fig1, fig2 } = aboutCss;

@@ -1,9 +1,7 @@
 import React from "react";
 import TestimonalsCss from "./testimonials.module.css";
-import groot from "../../assets/groot.jpg";
-import superMan from "../../assets/superman.jpg";
-import stefan from "../../assets/Štefan Štefančík.jpg";
-import Jake from "../../assets/Jake Nackos.jpg";
+import { groot, superMan, stefan, Jake } from "../../utils";
+
 const {
   testimonialSection,
   card,

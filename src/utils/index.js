@@ -1,0 +1,12 @@
+export const NavLogo = "/assets/Logo.svg";
+export const HeroImg = "/assets/HeroImage.jpg";
+export const Greeksalad = "/assets/greek salad.jpg";
+export const LemonDessert = "/assets/lemon dessert.jpg";
+export const bruchetta = "/assets/bruchetta.svg";
+export const groot = "/assets/groot.jpg";
+export const superMan = "/assets/superman.jpg";
+export const stefan = "/assets/Štefan Štefančík.jpg";
+export const Jake = "/assets/Jake Nackos.jpg";
+export const rest1 = "/assets/restaurant1.jpg";
+export const rest2 = "/assets/restaurant2.jpg";
+export const footerImg = '/assets/foo.jpg'
