@@ -1,7 +1,6 @@
 import React from "react";
+import { reviewData } from "../../utils/data";
 import TestimonalsCss from "./testimonials.module.css";
-import { groot, superMan, stefan, Jake } from "../../utils";
-
 const {
   testimonialSection,
   card,
@@ -11,34 +10,6 @@ const {
   textContent,
   figCaption,
 } = TestimonalsCss;
-
-const reviewData = [
-  {
-    id: "abc",
-    name: "Groot",
-    img: groot,
-    review: "Delicious food served in a cozy ambiance, great experience.",
-  },
-  {
-    id: "cca",
-    name: "Superman",
-    img: superMan,
-    review: "Tasty dishes, cozy vibe, highly recommended spot.",
-  },
-  {
-    id: "zzz",
-    name: "Štefan Štefančík",
-    img: stefan,
-    review: "Yummy food, friendly staff, definitely worth trying.",
-  },
-  {
-    id: "www",
-    name: "Jake Nackos",
-    img: Jake,
-    review:
-      "Outstanding cuisine, attentive staff, perfect spot for any occasion.",
-  },
-];
 
 const Testimonials = () => {
   return (
