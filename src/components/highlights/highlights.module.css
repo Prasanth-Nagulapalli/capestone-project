@@ -5,6 +5,7 @@
   flex-direction: column;
   gap: 2.5rem;
   justify-content: space-between;
+ 
 }
 
 .header {
@@ -37,5 +38,6 @@
   padding: 2rem 0;
   display: flex;
   justify-content: space-between;
+
   flex-wrap: wrap;
 }

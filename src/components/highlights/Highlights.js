@@ -1,21 +1,17 @@
 import React from "react";
-import highlightsCss from "./highlights.module.css";
 import Card from "../card/Card";
 import { specialDishes } from "../../utils/data";
 
 const Highlights = () => {
-  const { highlightSection, header, title, btnContainer, btn, cardContainer } =
-    highlightsCss;
-
   return (
-    <section className={highlightSection}>
-      <header className={header}>
-        <h1 className={title}>Specials</h1>
-        <div className={btnContainer}>
-          <button className={btn}>Online Menu</button>
+    <section className="highlight_section _max_width_center">
+      <header className="_flex_box">
+        <h2 className="highlight_title">Specials</h2>
+        <div>
+          <button className="highlight_btn _BTN_">Online Menu</button>
         </div>
       </header>
-      <section className={cardContainer}>
+      <section className="highlight_card_container">
         {specialDishes.map((item) => {
           const { id, img, heading, price, description } = item;
           return (

@@ -9,6 +9,7 @@ variables
   --clr-black-1: black;
   --clr-black-2: rgba(0, 0, 0, 0.35);
   --clr-bg-1: #495e57;
+  --clr-bg-2: #edefee;
   --clr-heading-1: #bedb0a;
   /* Hover Colors */
   --clr-hover-green: rgb(51, 255, 0);
@@ -20,8 +21,7 @@ variables
   --font-size-5: 1.8rem;
   --font-size-6: 1.5rem;
   --font-weight-medium: 500;
-
-  /* transistions */
+  /* transistion */
   --transition: all 0.25s linear;
 }
 
@@ -42,6 +42,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
@@ -76,6 +77,17 @@ h1 {
   font-weight: 500;
 }
 
+h2 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+._BTN_ {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
 /* NavBar */
 
 .main_nav_header {
@@ -192,14 +204,129 @@ h1 {
   right: 0;
   z-index: 10;
 }
+/* Highlights section */
+
+.highlight_section {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.highlight_title {
+  letter-spacing: 0.1rem;
+}
+
+.highlight_btn {
+  font-size: 1.8rem;
+  padding: 1.4rem 2.2rem;
+  background-color: black;
+  color: white;
+}
+.highlight_btn:hover {
+  filter: opacity(0.7) brightness(0.9);
+}
+
+.highlight_card_container {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  gap: 1.3rem;
+}
+
+/* Specials Card */
+.specials_card{
+  max-width: 26.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1.05fr;
+  row-gap: 1rem;
+  background-color: var(--clr-bg-2);
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+
+.specials_card_img{
+  overflow: hidden;
+}
+
+.specials_card img{
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: var(--transition);
+}
+
+.specials_card:hover .specials_card_img img{
+  transform: scale(1.07);
+}
+
+
+.specials_card_content {
+  width: 100%;
+  height: 100%;
+  padding: 0.8rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #edefee;
+}
+
+.specials_card_heading_price{
+  margin-bottom: 1.5rem;
+}
+
+.specials_card_title {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif, "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif, "Arial Narrow", Arial, sans-serif, Courier,
+    monospace;
+}
+.specials_card_price{
+  font-size: 1.6rem;
+  color: #ee9972;
+}
+
+
+.specials_card_desc{
+  font-size: 1.6rem;
+  color: #495e57;
+  flex-grow: 1;
+}
+
+.special_order_delivery{
+  color: rgba(0, 0, 0, 0.89);
+  display: flex;
+
+  gap: 2rem;
+  align-items: center;
+  margin: 1.2rem 0;
+}
+
+.special_order_title{
+  font-size: 1.6rem;
+}
+
+.special_order_delivery button{
+  border: none;
+  display: block;
+  transform: translateY(0.3rem);
+}
 
 @media screen and (max-width: 970px) {
   ._max_width_center {
     /* padding: 0 1.3rem; */
     margin: 0 1.3rem;
-  }
-  .hero_Img img {
-    /* right: 1.3rem; */
   }
 }
 
