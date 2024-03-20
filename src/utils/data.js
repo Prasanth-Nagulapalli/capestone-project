@@ -28,10 +28,6 @@ export const specialDishes = [
   },
 ];
 
-
-
-
-
 export const reviewData = [
   {
     id: "abc",
@@ -58,4 +54,13 @@ export const reviewData = [
     review:
       "Outstanding cuisine, attentive staff, perfect spot for any occasion.",
   },
+];
+
+export const navData = [
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Menu", path: "/menu" },
+  { name: "Reservations", path: "/reservations" },
+  { name: "Order Online", path: "/order online" },
+  { name: "Login", path: "/Login" },
 ];

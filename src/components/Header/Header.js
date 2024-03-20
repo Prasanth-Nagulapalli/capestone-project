@@ -1,36 +1,20 @@
 import React from "react";
-import HeaderCss from "./header.module.css";
 import { Link } from "react-router-dom";
 import { NavLogo } from "../../utils";
-
+import { navData } from "../../utils/data";
 const Header = () => {
-  const { header, nav, headerLogo, navList } = HeaderCss;
-
   return (
-    <header className={header}>
-      <nav className={nav}>
-        <figure className={headerLogo}>
+    <header className="main_nav_header">
+      <nav className="_flex_box _max_width_center">
+        <figure className="main_nav_logo">
           <img src={NavLogo} alt="Restaurant Logo" />
         </figure>
-        <ul className={navList}>
-          <li>
-            <Link to={"/"}>Home</Link>
-          </li>
-          <li>
-            <Link to={"/about"}>About</Link>
-          </li>
-          <li>
-            <Link to={"/menu"}>Menu</Link>
-          </li>
-          <li>
-            <Link href="#">Reservations</Link>
-          </li>
-          <li>
-            <Link href="#">Order Online</Link>
-          </li>
-          <li>
-            <Link href="#">Login</Link>
-          </li>
+        <ul className="_flex_box main_nav_list">
+          {navData.map((item) => (
+            <li key={item.name}>
+              <Link to={item.path}>{item.name}</Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>

@@ -1,21 +1,11 @@
 import React from "react";
-import HeroCss from "./hero.module.css";
 import { HeroImg } from "../../utils";
 const Hero = () => {
-  const {
-    heroSection,
-    sectionCenter,
-    heroArticle,
-    heroText,
-    tableBtn,
-    heroImg,
-  } = HeroCss;
-
   return (
-    <section className={heroSection}>
-      <section className={sectionCenter}>
-        <article className={heroArticle}>
-          <section className={heroText}>
+    <section className="hero_section">
+      <section className="hero_sec_center">
+        <article className="hero_article _max_width_center _flex_box">
+          <section className="hero_text _flex_box">
             <header>
               <h1>Little Lemon</h1>
               <p>Chicago</p>
@@ -24,9 +14,9 @@ const Hero = () => {
               We are a family owned mediteranean restaurant focused on
               traditional recipes served with a modern twist.{" "}
             </p>
-            <button className={tableBtn}>Reserve a Table</button>
+            <button className="reserve_btn">Reserve a Table</button>
           </section>
-          <figure className={heroImg}>
+          <figure className="hero_Img">
             <img src={HeroImg} alt="hero Img" />
           </figure>
         </article>
