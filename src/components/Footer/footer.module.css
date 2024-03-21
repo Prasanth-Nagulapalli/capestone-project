@@ -35,6 +35,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5rem;
+    border: 2px solid;
+   
     
 }
 
@@ -50,13 +52,4 @@
     color: #333333;
     text-decoration: none;
     font-weight: 500;
-}
-.DoormatNavigation{
-    /* border: 2px solid; */
-}
-.contactSection{
-
-}
-.mediaLinks ul{
-   /* align-self: center; */
 }

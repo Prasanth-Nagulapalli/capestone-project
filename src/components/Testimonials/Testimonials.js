@@ -1,37 +1,27 @@
 import React from "react";
 import { reviewData } from "../../utils/data";
-import TestimonalsCss from "./testimonials.module.css";
-const {
-  testimonialSection,
-  card,
-  ratingSection,
-  sectionCenter,
-  figure,
-  textContent,
-  figCaption,
-} = TestimonalsCss;
 
 const Testimonials = () => {
   return (
-    <section className={testimonialSection}>
-      <h1>Testimonials</h1>
-      <section className={sectionCenter}>
+    <section className="testimonial_section">
+      <h2 className="testimonial_heading">Testimonials</h2>
+      <section className="testi_sec_center _max_width_center _flex_box">
         {reviewData.map((item) => {
           const { id, name, img, review } = item;
           return (
-            <article className={card} key={id}>
-              <figure className={figure}>
+            <article className="testi_card" key={id}>
+              <figure className="testi_img_el">
                 <img src={img} alt={name} />
-                <figcaption className={figCaption}>
-                  <h2> {name}</h2>
+                <figcaption className="testi_img_caption">
+                  <h3> {name}</h3>
                 </figcaption>
               </figure>
-              <div className={textContent}>
-                <h2>Review</h2>
+              <div className="testi_text_content">
+                <h3>Review</h3>
                 <blockquote>{review}</blockquote>
               </div>
-              <section className={ratingSection}>
-                <h2>Rating </h2>
+              <section className="testi_rating_section _flex_box">
+                <h3>Rating </h3>
                 <span>
                   <i className="fa-solid fa-star"></i>
                 </span>

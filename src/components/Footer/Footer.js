@@ -14,14 +14,17 @@ const Footer = () => {
   } = footerCss;
 
   return (
-    <footer className={footer}>
-      <section className={footerCenter}>
-        <figure className={footerLogo}>
+    <footer className="footer_sec">
+      <section className="footer_center _max_width_center">
+        <figure className="footer_logo">
           <img src={footerImg} alt="footerImg" />
         </figure>
-        <nav className={navList}>
-          <section className={DoormatNavigation}>
+        <nav className="footer_navList">
+          <section className="footer_nav_section" >
+            <header>
+
             <h1>Doormat Navigation</h1>
+            </header>
 
             <ul>
               <li>
@@ -44,8 +47,11 @@ const Footer = () => {
               </li>
             </ul>
           </section>
-          <section className={contactSection}>
+          <section className="footer_nav_section">
+            <header>
+
             <h1>Contact</h1>
+            </header>
             <ul>
               <li>
                 <a href="#">Address</a>
@@ -58,8 +64,11 @@ const Footer = () => {
               </li>
             </ul>
           </section>
-          <section className={mediaLinks}>
+          <section className="footer_nav_section">
+            <header>
+
             <h1>Social Media Links</h1>
+            </header>
             <ul>
               <li>
                 <a href="#">Address</a>

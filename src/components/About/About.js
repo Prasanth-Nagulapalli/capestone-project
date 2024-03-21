@@ -1,13 +1,10 @@
 import React from "react";
-import aboutCss from "./about.module.css";
-import {rest1, rest2} from '../../utils'
+import { rest1, rest2 } from "../../utils";
 
 const About = () => {
-  const { about, textContent, imageContent, fig1, fig2 } = aboutCss;
-
   return (
-    <section className={about}>
-      <section className={textContent}>
+    <section className="about_section _max_width_center">
+      <section className="about_text_content">
         <header>
           <h1>Little Lemon</h1>
           <h2>Chicago</h2>
@@ -20,12 +17,12 @@ const About = () => {
           molestiae.
         </p>
       </section>
-      <section className={imageContent}>
-        <figure className={fig1}>
-          <img src={rest1} alt="" width={272} height={338} />
+      <section className="about_image_content">
+        <figure className="about_fig1">
+          <img src={rest1} alt="rest1" width={272} height={338} />
         </figure>
-        <figure className={fig2}>
-          <img src={rest2} alt="" width={272} height={338} />
+        <figure className="about_fig2">
+          <img src={rest2} alt="rest2" width={272} height={338} />
         </figure>
       </section>
     </section>

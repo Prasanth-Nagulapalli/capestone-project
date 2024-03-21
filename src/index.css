@@ -10,6 +10,7 @@ variables
   --clr-black-2: rgba(0, 0, 0, 0.35);
   --clr-bg-1: #495e57;
   --clr-bg-2: #edefee;
+  --clr-bg-3:#d9d9d9;
   --clr-heading-1: #bedb0a;
   /* Hover Colors */
   --clr-hover-green: rgb(51, 255, 0);
@@ -207,8 +208,8 @@ h2 {
 /* Highlights section */
 
 .highlight_section {
-  margin-top: 3rem !important;
-  margin-bottom: 3rem !important;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -323,10 +324,253 @@ h2 {
   transform: translateY(0.3rem);
 }
 
+
+
+/* Testimonials */
+
+.testimonial_section{
+  width: 100%;
+  background-color: var(--clr-bg-3);
+  margin-bottom: 20rem;
+  padding: 4.5rem 0;
+}
+.testimonialSection h1 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+.testi_sec_center{
+  padding: 7rem 0 9rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+ 
+}
+.testimonial_heading{
+  font-size: 3.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.testi_card{
+  width: 20.5rem;
+  padding: 1.2rem 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffffce;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.301);
+  border-radius: 1rem;
+  transition: 0.3s;
+  position: relative;
+}
+
+
+
+
+.testi_card:hover{
+  background-color: #fff;
+  transform: scale(1.1);
+  z-index: 5;
+}
+
+
+.testi_img_el img{
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 100px;
+  text-align: center;
+  transition: 0.2s;
+  z-index: 10;
+}
+
+.testi_img_caption{
+  margin: 1rem 0 0.5rem;
+}
+
+.testi_img_caption h3{
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.testi_text_content{
+  margin: 1rem 0;
+}
+
+.testi_text_content h3{
+ font-size: 1.6rem;
+ color: #000000b2;
+ font-weight: 500;
+}
+
+.testi_text_content blockquote{
+  font-size: 1.6rem;
+}
+
+.testi_rating_section{
+  width: 100%;
+  gap: 0.2rem;
+  margin: 0.6rem 0;
+}
+
+.testi_rating_section h3{
+  color: #000000b2;
+  margin-right: 1rem;
+}
+
+.testi_rating_section i {
+  color: rgb(252, 32, 99);
+  font-size: 1.5rem;
+}
+
+
+/* About */
+.about_section{
+  min-height: 468px;
+  margin: 10rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.about_text_content{
+  width: 94%;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+
+
+
+.about_text_content header h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif,
+    "Arial Narrow", Arial, sans-serif;
+}
+
+.about_text_content p{
+ font-size: 2rem;
+ font-weight: 600;
+ line-height: 3rem;
+ word-spacing: 0.7rem;
+}
+
+.about_image_content{
+  flex: 1;
+  position: relative;
+  height: 100%;
+}
+
+.about_image_content figure {
+  position: absolute;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.about_image_content figure img {
+  object-fit: cover;
+}
+.about_fig1 {
+  top: 0;
+  right: 0;
+}
+
+.about_fig2 {
+  bottom: 0;
+  left: 0;
+}
+
+
+/* Footer */
+
+.footer_sec{
+  background-color: var(--clr-bg-3);
+  padding: 5rem 0;
+}
+
+
+.footer_center{
+
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 4rem;
+  align-items: center;
+  
+}
+
+.footer_logo{
+  width: 100%;
+  height: 100%;
+}
+
+.footer_logo img{
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer_navList{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem;
+
+}
+.footer_navList h1{
+  font-size: 2rem;
+  font-weight: bold;
+  color: #495E57;
+
+} 
+.footer_navList ul{
+  margin-top: 0.5rem;
+}
+.footer_navList li{
+  list-style: none;
+  font-size: 1.6rem;
+  
+}
+.footer_navList li a{
+  color: #333333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer_nav_section{
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  
+}
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 970px) {
   ._max_width_center {
     /* padding: 0 1.3rem; */
-    margin: 0 1.3rem;
+    /* margin: 0 1.3rem; */
+    margin-left:1.3rem;
+    margin-right: 1.3rem;
   }
 }
 
