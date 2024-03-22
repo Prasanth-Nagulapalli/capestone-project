@@ -4,7 +4,7 @@ const Card = ({ id, img, heading, price, description }) => {
   return (
     <article className="specials_card" id={id}>
       <figure className="specials_card_img">
-        <img src={img} alt={heading} />
+        <img loading="lazy" src={img} alt={heading} />
       </figure>
       <section className="specials_card_content">
         <header className="specials_card_heading_price _flex_box">

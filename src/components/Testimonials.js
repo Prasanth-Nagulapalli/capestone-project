@@ -1,17 +1,25 @@
 import React from "react";
-import { reviewData } from "../../utils/data";
+import { reviewData } from "../utils/data";
 
 const Testimonials = () => {
+
+
+
+
   return (
     <section className="testimonial_section">
       <h2 className="testimonial_heading">Testimonials</h2>
       <section className="testi_sec_center _max_width_center _flex_box">
         {reviewData.map((item) => {
           const { id, name, img, review } = item;
+          
+         
+
+
           return (
             <article className="testi_card" key={id}>
               <figure className="testi_img_el">
-                <img src={img} alt={name} />
+                <img loading="lazy" src={img} alt={name} />
                 <figcaption className="testi_img_caption">
                   <h3> {name}</h3>
                 </figcaption>
@@ -22,7 +30,7 @@ const Testimonials = () => {
               </div>
               <section className="testi_rating_section _flex_box">
                 <h3>Rating </h3>
-                <span>
+                {/* <span>
                   <i className="fa-solid fa-star"></i>
                 </span>
                 <span>
@@ -36,7 +44,12 @@ const Testimonials = () => {
                 </span>
                 <span>
                   <i className="fa-solid fa-star"></i>
-                </span>
+                </span> */}
+                {[...Array(5)].map((_, index) => (
+                  <span key={index}>
+                    <i className="fa-solid fa-star"></i>
+                  </span>
+                ))}
               </section>
             </article>
           );

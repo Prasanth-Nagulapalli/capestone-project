@@ -1,23 +1,14 @@
 import React from "react";
-import footerCss from "./footer.module.css";
 import { Link } from "react-router-dom";
-import { footerImg } from "../../utils";
+import { footerImg } from "../utils";
 const Footer = () => {
-  const {
-    footer,
-    footerCenter,
-    footerLogo,
-    navList,
-    contactSection,
-    DoormatNavigation,
-    mediaLinks,
-  } = footerCss;
+
 
   return (
     <footer className="footer_sec">
       <section className="footer_center _max_width_center">
         <figure className="footer_logo">
-          <img src={footerImg} alt="footerImg" />
+          <img loading="lazy" src={footerImg} alt="footerImg" />
         </figure>
         <nav className="footer_navList">
           <section className="footer_nav_section" >
@@ -71,13 +62,13 @@ const Footer = () => {
             </header>
             <ul>
               <li>
-                <a href="#">Address</a>
+                <a href="#">Linkdin</a>
               </li>
               <li>
-                <a href="#">Phone Number</a>
+                <a href="#">GitHub</a>
               </li>
               <li>
-                <a href="#">Email</a>
+                <a href="#">Instagram</a>
               </li>
             </ul>
           </section>

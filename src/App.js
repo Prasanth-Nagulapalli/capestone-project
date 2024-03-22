@@ -1,13 +1,13 @@
 import "./App.css";
-import Header from "./components/Header/Header";
+import Header from "./components/Header";
 import AppRoutes from './routes/AppRoutes'
-import Footer from './components/Footer/Footer'
+import Footer from './components/Footer'
 const  App = () => {
   return (
     <>
       <Header />
       <AppRoutes />
-      <Footer />
+      {/* <Footer />  */}
     </>
   );
 }

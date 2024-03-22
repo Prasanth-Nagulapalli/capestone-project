@@ -1,6 +1,7 @@
 import React from "react";
-import Card from "../card/Card";
-import { specialDishes } from "../../utils/data";
+import Card from "./Card";
+
+import { specialDishes } from "../utils/data";
 
 const Highlights = () => {
   return (

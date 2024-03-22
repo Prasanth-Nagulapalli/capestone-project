@@ -1,5 +1,5 @@
 import React from "react";
-import { rest1, rest2 } from "../../utils";
+import { rest1, rest2 } from "../utils";
 
 const About = () => {
   return (
@@ -19,10 +19,10 @@ const About = () => {
       </section>
       <section className="about_image_content">
         <figure className="about_fig1">
-          <img src={rest1} alt="rest1" width={272} height={338} />
+          <img loading="lazy" src={rest1} alt="rest1" width={272} height={338} />
         </figure>
         <figure className="about_fig2">
-          <img src={rest2} alt="rest2" width={272} height={338} />
+          <img loading="lazy" src={rest2} alt="rest2" width={272} height={338} />
         </figure>
       </section>
     </section>

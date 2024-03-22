@@ -1,16 +1,16 @@
 import React from 'react'
-import Hero from '../components/Hero/Hero'
-import Highlights from '../components/highlights/Highlights'
-import Testimonials from '../components/Testimonials/Testimonials'
-import About from '../components/About/About'
+import Hero from '../components/Hero'
+import Highlights from '../components/Highlights'
+import Testimonials from '../components/Testimonials'
+import About from '../components//About'
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <Highlights />
-      <Testimonials />
-      <About />
+       <Highlights />
+      {/*<Testimonials />
+      <About /> */}
     </>
   )
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { HeroImg } from "../../utils";
+import { HeroImg } from "../utils";
 const Hero = () => {
   return (
     <section className="hero_section">
@@ -10,16 +10,26 @@ const Hero = () => {
               <h1>Little Lemon</h1>
               <p>Chicago</p>
             </header>
+            <div className="hero_div">
+
             <p>
               We are a family owned mediteranean restaurant focused on
               traditional recipes served with a modern twist.{" "}
             </p>
+            <figure className="hero_Img showImg">
+            <img loading="lazy" src={HeroImg} alt="hero Img" />
+          </figure>
+            </div>
             <button className="reserve_btn">Reserve a Table</button>
+            
           </section>
-          <figure className="hero_Img">
-            <img src={HeroImg} alt="hero Img" />
+          <figure className="hero_Img hideImg">
+            <img loading="lazy" src={HeroImg} alt="hero Img" />
           </figure>
         </article>
+
+
+    
       </section>
     </section>
   );
