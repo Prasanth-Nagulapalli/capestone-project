@@ -269,6 +269,12 @@ h2 {
 }
 
 /* Specials Card */
+
+
+
+
+
+
 .specials_card {
   max-width: 26.5rem;
   display: grid;
@@ -659,6 +665,13 @@ h2 {
     overflow: hidden;
     border-radius: 1rem;
   }
+
+  /* highlights section */
+    
+
+
+
+
 }
 
 @media screen and (max-width: 686px) {
@@ -737,18 +750,153 @@ h2 {
   }
 
   .reserve_btn {
-    width: 100%;
-    margin: 0 auto;
-    padding: 1.2rem 2rem;
-    font-size: 1.8rem;
+    /* width: 100%;
+    
+    margin: 0 auto; */
+    padding: 1rem 2.5rem;
+    font-size: 1.5rem;
+    border-radius: 10%;
+    
+  }
+
+ /* Highlights Section */
+
+  .highlight_section{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
+  }
+
+  .highlight_section > header {
+    /* border: 2px solid; */
+    
+  }
+
+  .highlight_section > header h2{
+    font-size: 2.5rem;
+  }
+  
+  .highlight_btn{
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
   }
 
 
+  .highlight_card_container{
+    /* border: 2px solid; */
+    padding: 1.2rem 0;
+  }
 
- 
- 
+
+  .highlight_card_container{
+    flex-direction: column;
+    /* border: 2px solid; */
+  }
+  /* Specials card */
+  
+  .specials_card{
+    max-width: 100%;
+    width:100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.2rem 0.5rem;
+    /* border: 2px solid; */
+    /* background-color: white; */
+    border-radius: 5px;
+    box-shadow: none;
+    position: relative;
+    /* height: 15rem; */
+    /* border: 2px solid; */
+    
+  }
+   
+
+   .specials_card_title{
+    font-size: 1.8rem;
+    color: rgba(0, 0, 0, 0.7);
+   }
 
 
+
+   .specials_card_img{
+    flex: 1;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.241); */
+    width: 100%;
+    /* position: relative;     */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+    height: 100%;
+    /* border: 2px solid; */
+    gap: 1.5rem;
+   }
+
+  .specials_card_img button{
+    background-color: #f4ce14;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+  }
+
+   
+  .specials_card_content{
+    flex: 1.9;
+
+    /* border: 2px solid; */
+    /* text-overflow: ellipsis; */
+    
+    padding: 0;
+    /* border: 2px solid; */
+  }
+
+  .specials_card_content header{
+    justify-content: space-between;
+    /* gap: 5rem; */
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.35); */
+  
+    padding-right: 2rem;
+    /* padding-bottom: 1rem; */
+  }
+
+   .specials_card_img img{
+    
+     width: 100px;
+     width: 100%;
+   
+     /* height:75px; */
+     
+   }
+
+  
+   /* .specials_card_price {
+    font-size: 1.2rem;
+    color: black;
+    position: absolute;
+    top: 15px;
+    right:  0;
+
+  } */
+   .specials_card_desc {
+    font-size: 1.29rem;
+    line-height: 1.7rem;
+
+  }
+
+  .special_order_delivery {
+    
+    margin-top: 1rem;
+    margin-bottom: 0;
+    
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+
+  .special_order_title {
+    font-size: 1.4rem;
+  }
 
 
   .about_section {
