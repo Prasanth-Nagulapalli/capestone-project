@@ -18,12 +18,18 @@ const About = () => {
         </p>
       </section>
       <section className="about_image_content">
-        <figure className="about_fig1">
-          <img loading="lazy" src={rest1} alt="rest1" width={272} height={338} />
+        <figure>
+          <img loading="lazy" src={rest1} alt="rest1" className="about_fig1" />
+          <img loading="lazy" src={rest2} alt="rest2" className="about_fig2"/>
+        </figure>
+        {/* <figure className="about_fig2">
+        </figure> */}
+        {/* <figure className="about_fig1">
+          <img loading="lazy" src={rest1} alt="rest1" />
         </figure>
         <figure className="about_fig2">
-          <img loading="lazy" src={rest2} alt="rest2" width={272} height={338} />
-        </figure>
+          <img loading="lazy" src={rest2} alt="rest2" />
+        </figure> */}
       </section>
     </section>
   );

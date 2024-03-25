@@ -9,4 +9,4 @@ export const stefan = "/assets/Stefan_stefancik.jpg";
 export const Jake = "/assets/Jake_Nackos.jpg";
 export const rest1 = "/assets/restaurant1.jpg";
 export const rest2 = "/assets/restaurant2.jpg";
-export const footerImg = '/assets/foo.jpg'
+export const footerImg = '/assets/footer_Logo.png'

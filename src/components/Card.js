@@ -8,7 +8,7 @@ const Card = ({ id, img, heading, price, description }) => {
     <article className="specials_card" id={id}>
       <figure className="specials_card_img">
         <img loading="lazy" src={img} alt={heading} />
-        {screenWidth <= 500 && <button className="_BTN_">Add +</button>}
+        {screenWidth <= 768 && <button className="_BTN_">Add +</button>}
       </figure>
       <section className="specials_card_content">
         <header className="specials_card_heading_price _flex_box">
