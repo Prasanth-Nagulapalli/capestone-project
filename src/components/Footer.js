@@ -14,7 +14,7 @@ const {screenWidth} = useScreenSize()
       </div>
       <section className="footer_center _max_width_center">
         <figure className="footer_logo">
-          {screenWidth <= 500 ?(
+          {screenWidth <= 686 ?(
 
             <>
           <img loading="lazy" src={NavLogo} alt="footerImg" />   <p><span>&copy; </span>copyright - 2025</p>
