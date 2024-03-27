@@ -20,3 +20,26 @@ const AppRoutes = () => {
 }
 
 export default AppRoutes
+
+
+
+
+// import React from "react";
+
+// import {Routes,Route} from 'react-router-dom'
+
+
+// const LazyHome = React.lazy(() => import('../pages/Home'))
+// const AppRoutes = () => {
+//   return (
+//     <>
+//     <Routes>
+//       <Route path="/" element={<LazyHome />} />
+//     </Routes>
+    
+    
+//     </>
+//   )
+// }
+
+// export default AppRoutes
