@@ -64,3 +64,11 @@ export const navData = [
   { name: "Order Online", path: "/order online" },
   { name: "Login", path: "/Login" },
 ];
+
+
+export const fontAwesomeIcons = {
+  calendar: "far fa-calendar",
+  user: "fa-solid fa-user",
+  occasion: "fa-sharp fa-solid fa-champagne-glasses",
+  time: "fa-solid fa-clock",
+};

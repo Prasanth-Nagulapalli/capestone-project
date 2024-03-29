@@ -146,11 +146,10 @@ h2 {
   content: "";
   width: 100%;
   height: 2px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   bottom: -5px;
   left: 0;
-  opacity: 0.5;
 }
 
 .nav_bars i {
@@ -1093,4 +1092,114 @@ h2 {
     font-size: 1.3rem;
     padding: 0.2rem 0;
   }
+}
+
+/* Reservation Testing */
+
+.reservation {
+  border: 2px solid;
+  height: 50vh;
+}
+
+.reservation-heading{
+  font-size: 3.5rem;
+  color: var(--clr-heading-1);
+  margin-bottom: 2rem;
+}
+.reservation form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  gap: 2.5rem 5rem;
+}
+
+.reservation label {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.indoor label,
+.outdoor label {
+  display: inline;
+  font-size: 2rem;
+}
+
+.indoor input,
+.outdoor input {
+  width: unset;
+  vertical-align: middle;
+  margin-left: 1rem;
+  transform: translateY(-3px);
+
+} 
+
+.reservation-input-container {
+  border: 2px solid;
+  border-radius: 5px;
+  position: relative;
+  width: 75%;
+  cursor: pointer;
+}
+
+
+
+.date-input,.members-input,.occasion-input,.time-input {
+  display: block;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.date input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 100%;
+  font-size: 2rem;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+  padding: 1.2rem;
+  /* appearance: none; */
+}
+
+.members-input,.occasion-input,.time-input {
+  padding: 1rem;
+}
+.absolute {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  opacity: 1;
+}
+
+.absolute span {
+  font-size: 2rem;
+  opacity: 0.6;
+}
+
+.show-input-details {
+  background-color: var(--clr-bg-1);
+  color: white;
+  opacity: 1;
+  font-weight: 500;
+}
+
+.show-input-details span {
+  opacity: 1;
+}
+
+select option {
+  font-size: 2.5rem;
+  
 }
