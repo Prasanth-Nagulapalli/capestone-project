@@ -75,8 +75,8 @@ const Testimonials = () => {
     <section className="testimonial_section">
       <h2 className="testimonial_heading">Testimonials</h2>
       <section className="testi_sec_center _max_width_center _flex_box">
-        {reviewData.map((item) => (
-          <Testimonial {...item} />
+        {reviewData.map((item, index) => (
+          <Testimonial key={index} {...item} />
         ))}
       </section>
     </section>

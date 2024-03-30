@@ -1099,6 +1099,7 @@ h2 {
 .reservation {
   border: 2px solid;
   height: 50vh;
+  /* background-color: rgb(25, 111, 34); */
 }
 
 .reservation-heading{

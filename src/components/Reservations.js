@@ -243,7 +243,7 @@
 // };
 
 import React, { useState } from "react";
-import { getCurrentDate } from "../utils/functions";
+import { getCurrentDate, useConsole } from "../utils/functions";
 import { fontAwesomeIcons } from "../utils/data";
 const Reservations = () => {
   return (
@@ -256,34 +256,10 @@ const Reservations = () => {
 export default Reservations;
 
 const Form1 = () => {
-
-const optionss = [
-  {
-    name:'No of Diners',
-    options:[1,2,3,4,5,6,7,8,9,10],
-    text:'Diners'
-  },
-  {
-    name:'Occasion',
-    options:["birthday, engagement, anniversary"],
-    text:''
-  },
-  {
-    name:'Select Time',
-    options:[5, 6, 7, 8, 9, 10],
-    text:': 00 pm'
-  }
-]
-
-
-
-
-
-
   const options = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   const [reservationDetails, setReservationsDetails] = useState({
-    seatingPreference: "indoor",
+    "indoor-outdoor": "indoor",
     date: "",
     diners: "",
     occasion: "",
@@ -298,11 +274,14 @@ const optionss = [
     });
   };
 
+  useConsole(reservationDetails);
+
   return (
     <section className="reservation _max_width_center">
       <h2 className="reservation-heading">Reservations</h2>
+
       <form>
-        <div className="indoor">
+        <section className="indoor">
           <label htmlFor="indoor">Indoor seating</label>
           <input
             type="radio"
@@ -311,7 +290,7 @@ const optionss = [
             value="indoor"
             onChange={handleChange}
           />
-        </div>
+        </section>
         <div className="outdoor">
           <label htmlFor="outdoor">Outdoor seating</label>
           <input
@@ -323,7 +302,7 @@ const optionss = [
           />
         </div>
 
-        <div className="date">
+        <section className="date">
           <label htmlFor="date">select date</label>
           <div className=" reservation-input-container">
             <input
@@ -345,16 +324,16 @@ const optionss = [
               />
             )}
           </div>
-        </div>
+        </section>
 
-        <div className="members">
+        <section className="members">
           <label htmlFor="diners">Number of Diners</label>
 
           <div className="reservation-input-container">
             <select
               name="diners"
               id="diners"
-              className="select-value members-input"
+              className="members-input"
               onChange={handleChange}
               value={diners}
             >
@@ -363,7 +342,9 @@ const optionss = [
               </option>
 
               {options.map((item) => (
-                <option value={item}>{item} Diner</option>
+                <option key={item} value={item}>
+                  {item} Diner
+                </option>
               ))}
             </select>
 
@@ -376,15 +357,15 @@ const optionss = [
               />
             )}
           </div>
-        </div>
+        </section>
 
-        <div className="occasion">
+        <section className="occasion">
           <label htmlFor="occasion">Occasion</label>
           <div className="reservation-input-container">
             <select
               name="occasion"
               id="occasion"
-              className="select-value occasion-input"
+              className="occasion-input"
               onChange={handleChange}
               value={occasion}
             >
@@ -407,15 +388,15 @@ const optionss = [
               />
             )}
           </div>
-        </div>
+        </section>
 
-        <div className="time">
+        <section className="time">
           <label htmlFor="time">Select Time</label>
           <div className="reservation-input-container">
             <select
               name="time"
               id="time"
-              className="select-value time-input"
+              className="time-input"
               onChange={handleChange}
               value={time}
             >
@@ -439,7 +420,7 @@ const optionss = [
               />
             )}
           </div>
-        </div>
+        </section>
       </form>
     </section>
   );
