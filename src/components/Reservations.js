@@ -242,9 +242,231 @@
 //   );
 // };
 
+// ! Main
+
+// import React, { useState } from "react";
+// import { getCurrentDate, useConsole } from "../utils/functions";
+// import { fontAwesomeIcons } from "../utils/data";
+// const Reservations = () => {
+//   return (
+//     <section>
+//       <Form1 />
+//     </section>
+//   );
+// };
+
+// export default Reservations;
+
+// const Form1 = () => {
+//   const options = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+//   const [reservationDetails, setReservationsDetails] = useState({
+//     "indoor-outdoor": "indoor",
+//     date: "",
+//     diners: "",
+//     occasion: "",
+//     time: "",
+//   });
+
+//   const { diners, date, occasion, time } = reservationDetails;
+//   const handleChange = (e) => {
+//     setReservationsDetails({
+//       ...reservationDetails,
+//       [e.target.name]: e.target.value,
+//     });
+//   };
+
+//   useConsole(reservationDetails);
+
+//   return (
+//     <section className="reservation _max_width_center">
+//       <h2 className="reservation-heading">Reservations</h2>
+
+//       <form>
+//         <section className="indoor">
+//           <label htmlFor="indoor">Indoor seating</label>
+//           <input
+//             type="radio"
+//             id="indoor"
+//             name="indoor-outdoor"
+//             value="indoor"
+//             onChange={handleChange}
+//           />
+//         </section>
+//         <div className="outdoor">
+//           <label htmlFor="outdoor">Outdoor seating</label>
+//           <input
+//             type="radio"
+//             id="outdoor"
+//             name="indoor-outdoor"
+//             value="outdoor"
+//             onChange={handleChange}
+//           />
+//         </div>
+
+//         <section className="date">
+//           <label htmlFor="date">select date</label>
+//           <div className=" reservation-input-container">
+//             <input
+//               type="date"
+//               name="date"
+//               id="date"
+//               className="date-input"
+//               value={date}
+//               min={getCurrentDate()}
+//               onChange={handleChange}
+//             />
+
+//             {date ? (
+//               <ShowInputDetails state={date} />
+//             ) : (
+//               <SelelctInputDetails
+//                 className={fontAwesomeIcons.calendar}
+//                 text={"Select Date"}
+//               />
+//             )}
+//           </div>
+//         </section>
+
+//         <section className="members">
+//           <label htmlFor="diners">Number of Diners</label>
+
+//           <div className="reservation-input-container">
+//             <select
+//               name="diners"
+//               id="diners"
+//               className="members-input"
+//               onChange={handleChange}
+//               value={diners}
+//             >
+//               <option value="" disabled>
+//                 No of Diners
+//               </option>
+
+//               {options.map((item) => (
+//                 <option key={item} value={item}>
+//                   {item} Diner
+//                 </option>
+//               ))}
+//             </select>
+
+//             {diners ? (
+//               <ShowInputDetails state={diners} text={"Diners"} />
+//             ) : (
+//               <SelelctInputDetails
+//                 className={fontAwesomeIcons.user}
+//                 text={"No of Diners"}
+//               />
+//             )}
+//           </div>
+//         </section>
+
+//         <section className="occasion">
+//           <label htmlFor="occasion">Occasion</label>
+//           <div className="reservation-input-container">
+//             <select
+//               name="occasion"
+//               id="occasion"
+//               className="occasion-input"
+//               onChange={handleChange}
+//               value={occasion}
+//             >
+//               <option value="" disabled>
+//                 Select Occasion
+//               </option>
+//               <option value="birthday">Birthday</option>
+//               <option value="engagement">Engagement</option>
+//               <option value="anniversary">Anniversary</option>
+//             </select>
+
+//             {occasion ? (
+//               <ShowInputDetails
+//                 state={occasion[0].toLocaleUpperCase() + occasion.slice(1)}
+//               />
+//             ) : (
+//               <SelelctInputDetails
+//                 className={fontAwesomeIcons.occasion}
+//                 text={"Occasion"}
+//               />
+//             )}
+//           </div>
+//         </section>
+
+//         <section className="time">
+//           <label htmlFor="time">Select Time</label>
+//           <div className="reservation-input-container">
+//             <select
+//               name="time"
+//               id="time"
+//               className="time-input"
+//               onChange={handleChange}
+//               value={time}
+//             >
+//               <option value="" disabled>
+//                 Select Time
+//               </option>
+//               <option value="5">5:00 pm</option>
+//               <option value="6">6:00 pm</option>
+//               <option value="7">7:00 pm</option>
+//               <option value="8">8:00 pm</option>
+//               <option value="9">9:00 pm</option>
+//               <option value="10">10:00 pm</option>
+//             </select>
+
+//             {time ? (
+//               <ShowInputDetails state={time} text={": 00 pm"} />
+//             ) : (
+//               <SelelctInputDetails
+//                 className={fontAwesomeIcons.time}
+//                 text={"Select Time"}
+//               />
+//             )}
+//           </div>
+//         </section>
+//       </form>
+//     </section>
+//   );
+// };
+
+// const ShowInputDetails = ({ state, text }) => {
+//   return (
+//     <>
+//       <div className="absolute show-input-details">
+//         <span></span>
+//         <span>
+//           {state} {text}
+//         </span>
+
+//         <span>
+//           <i className="fas fa-chevron-up"></i>
+//         </span>
+//       </div>
+//     </>
+//   );
+// };
+
+// const SelelctInputDetails = ({ className, text }) => {
+//   return (
+//     <div className="absolute">
+//       <span>
+//         <i className={className}></i>
+//       </span>
+//       <span>{text}</span>
+//       <span>
+//         <i className="fas fa-chevron-down"></i>
+//       </span>
+//     </div>
+//   );
+// };
+
+// ! Testing
+
 import React, { useState } from "react";
 import { getCurrentDate, useConsole } from "../utils/functions";
 import { fontAwesomeIcons } from "../utils/data";
+import reservationCss from "../styles/reservations.module.css";
+import { options } from "../utils/data";
+
 const Reservations = () => {
   return (
     <section>
@@ -256,7 +478,23 @@ const Reservations = () => {
 export default Reservations;
 
 const Form1 = () => {
-  const options = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  /* Importing CSS */
+
+  const {
+    reservation,
+    reservation_heading,
+    indoor,
+    outdoor,
+    reservation_input_container,
+    date_input,
+    members_input,
+    occasion_input,
+    time_input,
+    date_class,
+  } = reservationCss;
+
+  
 
   const [reservationDetails, setReservationsDetails] = useState({
     "indoor-outdoor": "indoor",
@@ -277,11 +515,11 @@ const Form1 = () => {
   useConsole(reservationDetails);
 
   return (
-    <section className="reservation _max_width_center">
-      <h2 className="reservation-heading">Reservations</h2>
+    <section className={`${reservation} _max_width_center`}>
+      <h2 className={reservation_heading}>Reservations</h2>
 
       <form>
-        <section className="indoor">
+        <section className={indoor}>
           <label htmlFor="indoor">Indoor seating</label>
           <input
             type="radio"
@@ -291,7 +529,7 @@ const Form1 = () => {
             onChange={handleChange}
           />
         </section>
-        <div className="outdoor">
+        <div className={outdoor}>
           <label htmlFor="outdoor">Outdoor seating</label>
           <input
             type="radio"
@@ -302,14 +540,14 @@ const Form1 = () => {
           />
         </div>
 
-        <section className="date">
+        <section className={date_class}>
           <label htmlFor="date">select date</label>
-          <div className=" reservation-input-container">
+          <div className={reservation_input_container}>
             <input
               type="date"
               name="date"
               id="date"
-              className="date-input"
+              className={date_input}
               value={date}
               min={getCurrentDate()}
               onChange={handleChange}
@@ -329,11 +567,11 @@ const Form1 = () => {
         <section className="members">
           <label htmlFor="diners">Number of Diners</label>
 
-          <div className="reservation-input-container">
+          <div className={reservation_input_container}>
             <select
               name="diners"
               id="diners"
-              className="members-input"
+              className={members_input}
               onChange={handleChange}
               value={diners}
             >
@@ -361,11 +599,11 @@ const Form1 = () => {
 
         <section className="occasion">
           <label htmlFor="occasion">Occasion</label>
-          <div className="reservation-input-container">
+          <div className={reservation_input_container}>
             <select
               name="occasion"
               id="occasion"
-              className="occasion-input"
+              className={occasion_input}
               onChange={handleChange}
               value={occasion}
             >
@@ -392,23 +630,22 @@ const Form1 = () => {
 
         <section className="time">
           <label htmlFor="time">Select Time</label>
-          <div className="reservation-input-container">
+          <div className={reservation_input_container}>
             <select
               name="time"
               id="time"
-              className="time-input"
+              className={time_input}
               onChange={handleChange}
               value={time}
             >
               <option value="" disabled>
                 Select Time
               </option>
-              <option value="5">5:00 pm</option>
-              <option value="6">6:00 pm</option>
-              <option value="7">7:00 pm</option>
-              <option value="8">8:00 pm</option>
-              <option value="9">9:00 pm</option>
-              <option value="10">10:00 pm</option>
+              {options.slice(4).map((item, index) => (
+                <option key={index} value={item}>
+                  {item}: 00 pm
+                </option>
+              ))}
             </select>
 
             {time ? (
@@ -427,9 +664,10 @@ const Form1 = () => {
 };
 
 const ShowInputDetails = ({ state, text }) => {
+  const { absolute_class, show_input_details } = reservationCss;
   return (
     <>
-      <div className="absolute show-input-details">
+      <div className={`${absolute_class} ${show_input_details}`}>
         <span></span>
         <span>
           {state} {text}
@@ -444,8 +682,9 @@ const ShowInputDetails = ({ state, text }) => {
 };
 
 const SelelctInputDetails = ({ className, text }) => {
+  const { absolute_class } = reservationCss;
   return (
-    <div className="absolute">
+    <div className={absolute_class}>
       <span>
         <i className={className}></i>
       </span>

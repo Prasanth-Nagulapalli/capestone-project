@@ -72,3 +72,6 @@ export const fontAwesomeIcons = {
   occasion: "fa-sharp fa-solid fa-champagne-glasses",
   time: "fa-solid fa-clock",
 };
+
+
+export const options = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];

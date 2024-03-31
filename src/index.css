@@ -1095,11 +1095,11 @@ h2 {
 }
 
 /* Reservation Testing */
-
+/* 
 .reservation {
   border: 2px solid;
   height: 50vh;
-  /* background-color: rgb(25, 111, 34); */
+  
 }
 
 .reservation-heading{
@@ -1165,7 +1165,7 @@ h2 {
   opacity: 0;
   cursor: pointer;
   padding: 1.2rem;
-  /* appearance: none; */
+ 
 }
 
 .members-input,.occasion-input,.time-input {
@@ -1203,4 +1203,4 @@ h2 {
 select option {
   font-size: 2.5rem;
   
-}
+} */
