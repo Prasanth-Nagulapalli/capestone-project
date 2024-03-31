@@ -1,5 +1,15 @@
+.main_reservations_container{
+  /* position: relative; */
+   background-color: var(--clr-bg-1);
+  /* z-index: -5; */
+}
+
+
 .reservation {
+  /* position: relative; */
   height: 50vh;
+  /* z-index: 5; */
+  background-color:transparent;
 }
 
 .reservation_heading {
@@ -15,7 +25,9 @@
 }
 
 .reservation label {
+  color: #ffffffc8;
   display: block;
+
   font-size: 1.4rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
@@ -25,6 +37,7 @@
 .outdoor label {
   display: inline;
   font-size: 2rem;
+  color: #fff;
 }
 
 .indoor input,
@@ -36,12 +49,25 @@
 }
 
 .reservation_input_container {
-  border: 2px solid;
+  /* border: 2px solid; */
+  overflow: hidden;
   border-radius: 5px;
   position: relative;
   width: 75%;
   cursor: pointer;
+  z-index: 2;
+  
 }
+
+
+
+.shadow{
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
+}
+/* .shadow{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+} */
+
 
 .date_input,
 .members_input,
@@ -50,7 +76,7 @@
   display: block;
   border: none;
   outline: none;
-  padding: 1rem;
+  padding: 1.5rem;
   width: 100%;
   height: 100%;
   font-size: 2rem;
@@ -65,9 +91,11 @@
   z-index: 2;
   opacity: 0;
   cursor: pointer;
+ 
 }
 
 .absolute_class {
+  background-color: white;
   padding: 0.5rem 1rem;
   width: 100%;
   height: 100%;
@@ -78,6 +106,10 @@
   top: 0;
   z-index: -1;
   opacity: 1;
+ font-weight: 500;
+
+
+  
 }
 
 .absolute_class span {
@@ -90,7 +122,12 @@
   color: white;
   opacity: 1;
   font-weight: 500;
+  
 }
+
+
+
+
 
 .show_input_details span {
   opacity: 1;
@@ -162,10 +199,10 @@ select option {
   .members_input,
   .occasion_input,
   .time_input {
-    padding: 0.5rem;
+    padding: 1rem;
   }
   .absolute_class span {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     padding: 0 0.5rem;
   }
 }
