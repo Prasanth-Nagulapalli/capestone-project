@@ -10,3 +10,6 @@ export const Jake = "/assets/Jake_Nackos.jpg";
 export const rest1 = "/assets/restaurant1.jpg";
 export const rest2 = "/assets/restaurant2.jpg";
 export const footerImg = '/assets/footer_Logo.png'
+export const littleLemon = '/assets/little_lemon.png'
+export const rest3 = '/assets/restaurant_3.jpg';
+export const rest_chef = '/assets/restaurant_chef.jpg'
