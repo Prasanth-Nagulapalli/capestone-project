@@ -57,7 +57,6 @@
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  /* box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px; */
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
   transition: 0.2s linear;
 }
@@ -72,8 +71,6 @@
   border-radius: 10px;
   padding: 1rem 4rem;
 }
-
-
 
 /* Form1 */
 
@@ -195,7 +192,129 @@ select option {
   font-size: 2.5rem;
 }
 
-/*  */
+/* Form 2 */
+
+.form_2_container {
+  /* border: 2px solid; */
+  position: relative;
+  z-index: 1;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  height: 100%;
+}
+
+.form_2_container_form {
+  /* height: 100%;  */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr) 2fr;
+  grid-column-gap: 100px;
+  grid-row-gap: 20px;
+}
+
+.form_2_container_form label,
+.form_2_container_form input {
+  display: block;
+  width: 100%;
+}
+
+.form_2_container_form label {
+  letter-spacing: 0.1rem;
+  font-size: 1.5rem;
+
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 4px;
+}
+
+.form_2_container_form input {
+  /* color: var(--clr-bg-1); */
+  /* font-weight:600; */
+  letter-spacing: 0.1rem;
+  font-size: 1.6rem;
+  border: none;
+  /* outline: none; */
+  border-radius: 5px;
+  padding: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.9);
+ 
+  
+}
+
+.specialRequest_class textarea {
+  font-size: 1.5rem;
+  color: var(--clr-bg-1);
+  font-weight: bold;
+  display: block;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+.form_2_state_details {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2.5rem;
+  gap: 3rem 0.5rem;
+  color: white;
+}
+
+.form2_calendar span,
+.form2_diners span,
+.form2_time span,
+.form2_occasion span {
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+.form2_calendar,
+.form2_diners,
+.form2_time,
+.form2_occasion {
+  font-size: 2rem;
+}
+
+.form2_seating {
+  /* padding-top: 1rem; */
+  text-align: center;
+  /* border: 2px solid; */
+  margin: 1rem 0;
+  margin: 1.5rem 0;
+}
+.form2_seating label {
+  font-weight: 700;
+}
+
+.form2_diners,
+.form2_occasion {
+  justify-self: flex-end;
+}
+
+.form2_agrement {
+  /* border: 2px solid; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding-top: 1rem; */
+}
+
+.form2_agrement input {
+  width: 25px;
+  display: inline-block;
+  margin-right: 1.2rem;
+  /* vertical-align: middle; */
+}
+
+.form2_agrement label {
+  font-size: 1.2rem;
+  font-size: 1.2rem;
+  transform: translateY(2px);
+}
+
 
 @media screen and (max-width: 768px) {
   .reservation_form_img_container figure {
@@ -205,6 +324,12 @@ select option {
   .reservation_form_img_container figure img {
     width: 100%;
   }
+
+  /* !Form2 */
+  .form_2_container_form {
+    grid-column-gap: 5rem;
+    grid-row-gap: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 686px) {
@@ -212,9 +337,8 @@ select option {
     gap: 1.5rem;
     grid-template-rows: 200px;
   }
-  
 
- /* Form 1 */
+  /* Form 1 */
 
   .reservation form {
     gap: 2.5rem 4rem;
@@ -224,11 +348,33 @@ select option {
     padding: 0.5rem 1.5rem;
   }
 
- 
+  /* !Form2 */
+
+  .form_2_container_form {
+    grid-column-gap: 3rem;
+  }
+
+  .form_2_container_form label {
+    font-size: 1.2rem;
+  }
+
+  .form_2_container_form input,
+  .specialRequest_class textarea {
+    font-size: 1.4rem;
+  }
+
+  .form2_calendar,
+  .form2_diners,
+  .form2_time,
+  .form2_occasion {
+    font-size: 1.4rem;
+  }
+  .form2_agrement label {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 500px) {
- 
   .little_Lemon_background {
     min-width: 150px;
   }
@@ -255,10 +401,7 @@ select option {
     height: 105px;
   }
 
-
-
   /* Form1 */
-
 
   .reservation {
     padding-bottom: 1.5rem;
@@ -297,10 +440,6 @@ select option {
     transform: translateY(-1px);
   }
 
-  /* .reservation_input_container {
-    width: 100%;
-  } */
-
   .date_input,
   .members_input,
   .occasion_input,
@@ -310,6 +449,30 @@ select option {
   .absolute_class span {
     font-size: 1.5rem;
     padding: 0 0.5rem;
+  }
+
+  /* ? Form2 */
+
+  .form_2_container_form {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .form_2_state {
+    width: 95%;
+    margin: 1rem auto;
+    order: 2;
+  }
+
+  .form2_calendar,
+  .form2_diners,
+  .form2_time,
+  .form2_occasion {
+    font-size: 1.6rem;
+  }
+
+  .form2_seating {
+    text-align: center;
   }
 }
 

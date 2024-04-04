@@ -5,7 +5,8 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import NotFound from '../components/NotFound';
 // import Reservations from '../components/ReservationsTest';
-import Reservations from '../components/Reservations';
+// import Reservations from '../components/Reservations';
+import Reservations from '../reservations/Reservations';
 
 
 
