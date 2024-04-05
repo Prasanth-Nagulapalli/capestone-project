@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { getCurrentDate, useConsole } from "../utils/functions";
 import { fontAwesomeIcons } from "../utils/data";
 import reservationCss from "./reservations.module.css";
 import { options } from "../utils/data";
 
-const Form1 = () => {
+const Form1 = ({handleChange, reservationDetails}) => {
     /* Importing CSS */
   
     const {
@@ -21,24 +21,28 @@ const Form1 = () => {
       shadow,
     } = reservationCss;
   
-    const [reservationDetails, setReservationsDetails] = useState({
-      "indoor-outdoor": "indoor",
-      date: "",
-      diners: "",
-      occasion: "",
-      time: "",
-    });
-  
+
     const { diners, date, occasion, time } = reservationDetails;
-    const handleChange = (e) => {
-      setReservationsDetails({
-        ...reservationDetails,
-        [e.target.name]: e.target.value,
-      });
-    };
+
+
+    // const [reservationDetails, setReservationsDetails] = useState({
+    //   "indoor-outdoor": "indoor",
+    //   date: "",
+    //   diners: "",
+    //   occasion: "",
+    //   time: "",
+    // });
   
-    useConsole(reservationDetails);
+    // const { diners, date, occasion, time } = reservationDetails;
+    // const handleChange = (e) => {
+    //   setReservationsDetails({
+    //     ...reservationDetails,
+    //     [e.target.name]: e.target.value,
+    //   });
+    // };
   
+
+
     return (
       <section className={`${reservation} _max_width_center`}>
         <h2 className={reservation_heading}>Reservations</h2>
@@ -208,6 +212,7 @@ const Form1 = () => {
               )}
             </div>
           </section>
+          {/* <button type="submit">Submit</button> */}
         </form>
       </section>
     );

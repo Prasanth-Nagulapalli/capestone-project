@@ -22,3 +22,9 @@ export const useConsole = (value) => {
 
 
 }
+
+
+
+export const toUpper = (str) => {
+  return str[0].toUpperCase() + str.slice(1) 
+}

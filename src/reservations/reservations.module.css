@@ -237,8 +237,6 @@ select option {
   border-radius: 5px;
   padding: 0.9rem;
   background-color: rgba(255, 255, 255, 0.9);
- 
-  
 }
 
 .specialRequest_class textarea {
@@ -251,7 +249,6 @@ select option {
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.9);
 }
-
 
 .form_2_state_details {
   width: 100%;
@@ -276,6 +273,14 @@ select option {
 .form2_time,
 .form2_occasion {
   font-size: 2rem;
+  cursor: pointer;
+  text-shadow: 2px 2px rgb(0, 0, 0);
+}
+
+.orange_color {
+  color: rgb(255, 140, 0);
+  color: #ffa368;
+  text-shadow: none;
 }
 
 .form2_seating {
@@ -299,7 +304,13 @@ select option {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   /* padding-top: 1rem; */
+}
+
+.form2_agrement input,
+.form2_agrement label {
+  cursor: pointer;
 }
 
 .form2_agrement input {
@@ -314,7 +325,6 @@ select option {
   font-size: 1.2rem;
   transform: translateY(2px);
 }
-
 
 @media screen and (max-width: 768px) {
   .reservation_form_img_container figure {
