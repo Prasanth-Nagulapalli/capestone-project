@@ -1,6 +1,3 @@
-.main_reservations_container {
-}
-
 .reservation_form_container {
   position: relative;
   width: 100%;
@@ -64,7 +61,6 @@
 .reservation_btn_container {
   padding-top: 1rem;
   padding-bottom: 2rem;
-  /* margin: 1rem auto 2rem; */
 }
 .reservation_btn_container button {
   margin: 0 auto;
@@ -79,7 +75,6 @@
   height: 100%;
   z-index: 5;
   background-color: transparent;
-  /* border: 2px solid; */
   padding-bottom: 2.5rem;
 }
 
@@ -195,7 +190,6 @@ select option {
 /* Form 2 */
 
 .form_2_container {
-  /* border: 2px solid; */
   position: relative;
   z-index: 1;
   padding-bottom: 1rem;
@@ -204,12 +198,12 @@ select option {
 }
 
 .form_2_container_form {
-  /* height: 100%;  */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr) 2fr;
   grid-column-gap: 100px;
   grid-row-gap: 20px;
+  grid-row-gap: 1.5rem;
 }
 
 .form_2_container_form label,
@@ -228,12 +222,9 @@ select option {
 }
 
 .form_2_container_form input {
-  /* color: var(--clr-bg-1); */
-  /* font-weight:600; */
   letter-spacing: 0.1rem;
   font-size: 1.6rem;
   border: none;
-  /* outline: none; */
   border-radius: 5px;
   padding: 0.9rem;
   background-color: rgba(255, 255, 255, 0.9);
@@ -284,14 +275,13 @@ select option {
 }
 
 .form2_seating {
-  /* padding-top: 1rem; */
   text-align: center;
-  /* border: 2px solid; */
   margin: 1rem 0;
   margin: 1.5rem 0;
 }
 .form2_seating label {
   font-weight: 700;
+  cursor: pointer;
 }
 
 .form2_diners,
@@ -300,12 +290,9 @@ select option {
 }
 
 .form2_agrement {
-  /* border: 2px solid; */
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  /* padding-top: 1rem; */
 }
 
 .form2_agrement input,
@@ -317,13 +304,72 @@ select option {
   width: 25px;
   display: inline-block;
   margin-right: 1.2rem;
-  /* vertical-align: middle; */
 }
 
 .form2_agrement label {
   font-size: 1.2rem;
   font-size: 1.2rem;
   transform: translateY(2px);
+}
+
+.form_errors_class {
+  font-size: 1.4rem;
+  word-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
+  color: rgba(255, 162, 104, 0.9);
+  transform: translateY(4px);
+}
+
+/* CofirmCard */
+
+.confirm_card {
+  width: clamp(200px, 90%, 700px);
+  height: 250px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  position: fixed;
+  margin: auto;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateY(-200%);
+  z-index: 55;
+  color: cadetblue;
+  color: var(--clr-bg-1);
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  animation: confirmAnimation 0.5s forwards;
+}
+
+.confirm_card h1 {
+  font-size: clamp(1.6rem, 4vw, 3.5rem);
+}
+.confirm_card h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+@keyframes confirmAnimation {
+  from {
+    transform: translateY(-200%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 836px) {
+  .form_2_container_form {
+    grid-column-gap: 8rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -338,7 +384,13 @@ select option {
   /* !Form2 */
   .form_2_container_form {
     grid-column-gap: 5rem;
-    grid-row-gap: 1.5rem;
+  }
+
+  .form2_calendar,
+  .form2_diners,
+  .form2_time,
+  .form2_occasion {
+    font-size: 1.8rem;
   }
 }
 
@@ -379,8 +431,22 @@ select option {
   .form2_occasion {
     font-size: 1.4rem;
   }
+
   .form2_agrement label {
     font-size: 1rem;
+  }
+
+  .form_errors_class {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .form2_calendar span,
+  .form2_diners span,
+  .form2_time span,
+  .form2_occasion span {
+    margin-left: 0.6rem;
   }
 }
 
@@ -466,6 +532,8 @@ select option {
   .form_2_container_form {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    row-gap: 1rem;
+    row-gap: 0.6rem;
   }
 
   .form_2_state {
@@ -481,7 +549,20 @@ select option {
     font-size: 1.6rem;
   }
 
+  .form2_calendar span,
+  .form2_diners span,
+  .form2_time span,
+  .form2_occasion span {
+    margin-left: 1.6rem;
+  }
+
   .form2_seating {
+    text-align: center;
+  }
+
+  .confirm_card {
+    padding: 1rem;
+    height: 180px;
     text-align: center;
   }
 }

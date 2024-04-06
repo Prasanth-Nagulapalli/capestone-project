@@ -1,19 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { fontAwesomeIcons } from "../utils/data";
 import reservationCss from "./reservations.module.css";
 import { toUpper } from "../utils/functions";
 
-const Form2 = ({ reservationDetails, handleFlag }) => {
-  const [details, setDetails] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-    specialRequest: "",
-  });
-
-  const { firstName, lastName, email, phoneNumber, specialRequest } = details;
-
+const Form2 = ({
+  reservationDetails,
+  handleFlag,
+  handleChange,
+  details,
+  formErrors,
+}) => {
   const {
     form_2_container,
     form_2_container_form,
@@ -28,11 +24,10 @@ const Form2 = ({ reservationDetails, handleFlag }) => {
     form2_seating,
     form2_agrement,
     orange_color,
+    form_errors_class,
   } = reservationCss;
 
-  const handleChange = (e) => {
-    setDetails({ ...details, [e.target.name]: e.target.value });
-  };
+  const { firstName, lastName, email, phoneNumber, specialRequest } = details;
 
   const {
     "indoor-outdoor": indoorOutdoor,
@@ -41,8 +36,6 @@ const Form2 = ({ reservationDetails, handleFlag }) => {
     occasion,
     time,
   } = reservationDetails;
-
-  
 
   return (
     <section className={`${form_2_container} _max_width_center`}>
@@ -58,7 +51,11 @@ const Form2 = ({ reservationDetails, handleFlag }) => {
             placeholder="FirstName"
             onChange={handleChange}
             required
+            style={formErrors.firstName ? { border: "2px solid orange" } : {}}
           />
+          <p className={form_errors_class}>
+            {formErrors.firstName || "\u00A0"}
+          </p>
         </div>
 
         <div className="lastName">
@@ -72,7 +69,9 @@ const Form2 = ({ reservationDetails, handleFlag }) => {
             placeholder="LastName"
             onChange={handleChange}
             required
+            style={formErrors.lastName ? { border: "2px solid orange" } : {}}
           />
+          <p className={form_errors_class}>{formErrors.lastName || "\u00A0"}</p>
         </div>
 
         <div className={form2_email}>
@@ -86,7 +85,9 @@ const Form2 = ({ reservationDetails, handleFlag }) => {
             placeholder="Email"
             onChange={handleChange}
             required
+            style={formErrors.email ? { border: "2px solid orange" } : {}}
           />
+          <p className={form_errors_class}>{formErrors.email || "\u00A0"}</p>
         </div>
 
         <div className="phoneNumber">
@@ -100,7 +101,11 @@ const Form2 = ({ reservationDetails, handleFlag }) => {
             placeholder="No -"
             onChange={handleChange}
             required
+            style={formErrors.phoneNumber ? { border: "2px solid orange" } : {}}
           />
+          <p className={form_errors_class}>
+            {formErrors.phoneNumber || "\u00A0"}
+          </p>
         </div>
 
         <div className={form_2_state}>
@@ -129,7 +134,7 @@ const Form2 = ({ reservationDetails, handleFlag }) => {
                 <div className={orange_color}>
                   <i className={fontAwesomeIcons.user}></i>
 
-                  <span> Select Diners</span>
+                  <span>No Diners</span>
                 </div>
               )}
             </div>
@@ -157,17 +162,28 @@ const Form2 = ({ reservationDetails, handleFlag }) => {
                 <div className={orange_color}>
                   <i className={fontAwesomeIcons.occasion}></i>
 
-                  <span>Select occasion</span>
+                  <span>occasion</span>
                 </div>
               )}
             </div>
           </div>
-          <div className={form2_seating}>
+          <div className={form2_seating} onClick={handleFlag}>
             <label>{toUpper(indoorOutdoor)} Seating</label>
           </div>
           <div className={form2_agrement}>
-            <input type="radio" name="" id="agrement" />
-            <label htmlFor="agrement">
+            <input
+              type="radio"
+              name="agrement"
+              id="agrement"
+              value={true}
+              onChange={handleChange}
+            />
+            <label
+              htmlFor="agrement"
+              style={
+                formErrors.agrement ? { color: "orange" } : { color: "white" }
+              }
+            >
               You agree to our friendly Privacy policy
             </label>
           </div>

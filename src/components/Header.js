@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="main_nav_header">
+      <header className="main_nav_header" id="Home_Nav">
         <nav className="_flex_box _max_width_center">
           <figure className="main_nav_logo">
             <img loading="lazy" src={NavLogo} alt="Restaurant Logo" />

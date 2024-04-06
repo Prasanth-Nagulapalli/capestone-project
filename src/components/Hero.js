@@ -1,8 +1,10 @@
 import React from "react";
 import { useScreenSize } from "../customHooks/ScreenSizeContext";
 import { HeroImg } from "../utils";
+import { useNavigate } from "react-router-dom";
 const Hero = () => {
   const { screenWidth } = useScreenSize();
+  const navigate = useNavigate();
 
   return (
     <section className="hero_section">
@@ -13,7 +15,7 @@ const Hero = () => {
               <h1>Little Lemon</h1>
               <p>Chicago</p>
             </header>
-            <div className="hero_div" >
+            <div className="hero_div">
               <p>
                 We are a family owned mediteranean restaurant focused on
                 traditional recipes served with a modern twist.{" "}
@@ -24,7 +26,12 @@ const Hero = () => {
                 </figure>
               )}
             </div>
-            <button className="reserve_btn">Reserve a Table</button>
+            <button
+              className="reserve_btn"
+              onClick={() => navigate("/reservations")}
+            >
+              Reserve a Table
+            </button>
           </section>
           {screenWidth > 500 && (
             <figure className="hero_Img">
