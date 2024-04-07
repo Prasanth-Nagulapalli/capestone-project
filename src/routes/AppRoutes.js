@@ -1,11 +1,8 @@
 import React from 'react'
-
 import { Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import About from '../pages/About';
 import NotFound from '../components/NotFound';
-// import Reservations from '../components/ReservationsTest';
-// import Reservations from '../components/Reservations';
 import Reservations from '../reservations/Reservations';
 
 

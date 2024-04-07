@@ -1,35 +1,29 @@
-import React from 'react'
-import Hero from '../components/Hero'
-import Highlights from '../components/Highlights'
+import React from "react";
+import Hero from "../components/Hero";
+import Highlights from "../components/Highlights";
 import Testimonials from '../components/Testimonials'
-import About from '../components//About'
+import About from "../components//About";
 
 
 
 const Home = () => {
-    return (
+  return (
     <>
       <Hero />
-       <Highlights />
+      <Highlights />
       <Testimonials />
       <About />
     </>
-  )
-}
+  );
+};
 
-export default Home
-
-
-
-
-
+export default Home;
 
 // import React from 'react';
 // const LazyHero = React.lazy(() => import('../components/Hero'));
 // const LazyHighlights = React.lazy(() => import('../components/Highlights'));
 // const LazyTestimonials = React.lazy(() => import('../components/Testimonials'));
 // const LazyAbout = React.lazy(() => import('../components/About'))
-
 
 // const Home = () => {
 //   return(
@@ -38,11 +32,9 @@ export default Home
 //     <LazyHighlights />
 //     <LazyTestimonials />
 //     <LazyAbout />
-    
-    
+
 //     </>
 //   )
 // }
-
 
 // export default Home
