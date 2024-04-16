@@ -23,7 +23,6 @@
 //               </div>
 //               <section className="testi_rating_section _flex_box">
 //                 <h3>Rating </h3>
-                
 
 //                 {[...Array(5)].map((_, index) => (
 //                   <span key={index}>
@@ -41,11 +40,10 @@
 
 // export default Testimonials;
 
-
 import React from "react";
 import { reviewData } from "../utils/data";
 
-const Testimonial = React.memo(({ id, name, img, review }) => {
+const Testimonial = ({ id, name, img, review }) => {
   return (
     <article className="testi_card" key={id}>
       <figure className="testi_img_el">
@@ -68,7 +66,7 @@ const Testimonial = React.memo(({ id, name, img, review }) => {
       </section>
     </article>
   );
-});
+};
 
 const Testimonials = () => {
   return (

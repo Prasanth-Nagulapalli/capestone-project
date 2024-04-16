@@ -1,7 +1,7 @@
 import React from "react";
 import { useScreenSize } from "../customHooks/ScreenSizeContext";
 
-const Card =  React.memo(({ id, img, heading, price, description }) => {
+const Card =  ({ id, img, heading, price, description }) => {
   const { screenWidth } = useScreenSize();
 
   return (
@@ -32,6 +32,6 @@ const Card =  React.memo(({ id, img, heading, price, description }) => {
       </section>
     </article>
   );
-});
+};
 
 export default Card;

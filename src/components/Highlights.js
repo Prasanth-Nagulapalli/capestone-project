@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
-
 import { specialDishes } from "../utils/data";
+// const Card = React.lazy(() => import ('./Card'))
 
 const Highlights = () => {
   return (

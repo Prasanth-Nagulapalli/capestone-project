@@ -9,14 +9,11 @@ import ConfirmCard from "./ConfirmCard";
 // import { fontAwesomeIcons } from "../utils/data";
 
 const Reservations = () => {
-  
-
   const [flag, setFlag] = useState(true);
 
   const [confirmFlag, setConfirmFlag] = useState(false);
 
   const [formErrors, setFormErrors] = useState({});
-
 
   const {
     main_reservations_container,
@@ -25,8 +22,6 @@ const Reservations = () => {
     reservation_btn_container,
     little_Lemon_background,
   } = reservationCss;
-
-
 
   /* Form 1 */
 
@@ -66,41 +61,41 @@ const Reservations = () => {
   };
 
   const handleFormErrors = () => setFormErrors(() => validateForm(details));
- 
-  const handleConfirmFlag = () => {
-    setConfirmFlag(true)
-  const timeOutId =   setTimeout(() => {
-      setConfirmFlag(false)
-    }, 5000)
 
-    return () => clearTimeout(timeOutId)
-  }
- 
- const handleReset = () => {
-   setDetails({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-    specialRequest: "",
-    agrement: false,
-  });
-  setReservationsDetails({
-    "indoor-outdoor": "indoor",
-    date: "",
-    diners: "",
-    occasion: "",
-    time: "",
-  })
-  setFlag(true)
- }
+  const handleConfirmFlag = () => {
+    setConfirmFlag(true);
+    const timeOutId = setTimeout(() => {
+      setConfirmFlag(false);
+    }, 5000);
+
+    return () => clearTimeout(timeOutId);
+  };
+
+  const handleReset = () => {
+    setDetails({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phoneNumber: "",
+      specialRequest: "",
+      agrement: false,
+    });
+    setReservationsDetails({
+      "indoor-outdoor": "indoor",
+      date: "",
+      diners: "",
+      occasion: "",
+      time: "",
+    });
+    setFlag(true);
+  };
 
   const handleReservation = () => {
     if (flag) {
       setFlag(false);
       return;
     }
-    const { firstName, lastName, email, phoneNumber,agrement } = details;
+    const { firstName, lastName, email, phoneNumber, agrement } = details;
     const {
       "indoor-outdoor": indoorOutdoor,
       diners,
@@ -121,9 +116,8 @@ const Reservations = () => {
       time
     ) {
       // setConfirmFlag(true);
-      handleConfirmFlag()
-      handleReset()
-      
+      handleConfirmFlag();
+      handleReset();
     } else {
       handleFormErrors();
     }
@@ -140,8 +134,8 @@ const Reservations = () => {
     }
     if (!obj.email) {
       errors.email = "Email is Required";
-    }else if(!regex.test(obj.email)) {
-      errors.email = "This is not a valid email"
+    } else if (!regex.test(obj.email)) {
+      errors.email = "This is not a valid email";
     }
     if (!obj.phoneNumber) {
       errors.phoneNumber = "Phone is Required";
