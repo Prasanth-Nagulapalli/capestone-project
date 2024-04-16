@@ -188,6 +188,86 @@ h2 {
   }
 }
 
+.success-card {
+  width: clamp(200px, 90%, 700px);
+  background-color: rgba(16, 16, 16, 0.9);
+  background: linear-gradient(to top, #6a4cff, #20bdff, #a5fecb);
+  color: black;
+  margin: auto;
+  max-height: 250px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  border-radius: 20px;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  transition: all 2s linear;
+  animation: success 5s forwards;
+  overflow: hidden;
+}
+
+.success-card h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+.success-card h2 {
+  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+.circle-1 {
+  position: absolute;
+  top: 0;
+  right: 0rem;
+  width: 25%;
+  background: black;
+  height: 50%;
+  border-radius: 50%;
+  transform: translateX(5rem) translateY(-4rem);
+}
+.circle-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0rem;
+  width: 25%;
+  background: black;
+  height: 50%;
+  border-radius: 50%;
+  transform: translateX(-5rem) translateY(4rem);
+}
+
+/* !Trail */
+
+@keyframes success {
+  0% {
+    transform: scale(0.1);
+  }
+  40% {
+    transform: scale(1);
+  }
+  55% {
+    color: white;
+  }
+  75% {
+    transform: scale(1);
+    opacity: 1;
+    color: white;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateX(-200rem);
+    opacity: 0.2;
+  }
+}
+
 /* Media query for responsiveness */
 
 /* Hero */
@@ -579,7 +659,7 @@ h2 {
 }
 .login-form-email,
 .login-form-password {
-  margin: 2.5rem 0;
+  margin: 2.2rem 0;
 }
 
 .login-form-btn-container {
@@ -601,7 +681,6 @@ h2 {
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
-  /* transition: all 0.2s linear; */
 }
 .login-with-other span {
   cursor: pointer;
@@ -616,6 +695,17 @@ h2 {
 
   cursor: pointer;
 }
+
+.form-errors-class {
+  font-size: 1.4rem;
+  font-weight: 500;
+  word-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
+  color: rgb(255, 150, 2);
+  transform: translateY(4px);
+  padding-left: 0.5rem;
+}
+
 /* Footer */
 
 .footer_sec {
@@ -1222,10 +1312,9 @@ h2 {
     font-size: 2.5rem;
     font-family: sans-serif;
     margin-bottom: 1rem;
-    /* opacity: 0.9; */
   }
   .login-form header {
-    margin-bottom: 5.5rem;
+    margin-bottom: 4.5rem;
   }
 
   .login-form {
@@ -1233,6 +1322,18 @@ h2 {
     box-shadow: none;
     margin-bottom: 2rem;
     margin-top: 6rem;
+  }
+
+  .success-card {
+    width: 95%;
+    height: 175px;
+  }
+
+  .circle-1 {
+    transform: translateX(4rem) translateY(-3.5rem);
+  }
+  .circle-2 {
+    transform: translateX(-4rem) translateY(3.5rem);
   }
 
   /* Footer */
@@ -1247,113 +1348,4 @@ h2 {
   }
 }
 
-/* Reservation Testing */
-/* 
-.reservation {
-  border: 2px solid;
-  height: 50vh;
-  
-}
 
-.reservation-heading{
-  font-size: 3.5rem;
-  color: var(--clr-heading-1);
-  margin-bottom: 2rem;
-}
-.reservation form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr 1fr;
-  gap: 2.5rem 5rem;
-}
-
-.reservation label {
-  display: block;
-  font-size: 1.4rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.indoor label,
-.outdoor label {
-  display: inline;
-  font-size: 2rem;
-}
-
-.indoor input,
-.outdoor input {
-  width: unset;
-  vertical-align: middle;
-  margin-left: 1rem;
-  transform: translateY(-3px);
-
-} 
-
-.reservation-input-container {
-  border: 2px solid;
-  border-radius: 5px;
-  position: relative;
-  width: 75%;
-  cursor: pointer;
-}
-
-
-
-.date-input,.members-input,.occasion-input,.time-input {
-  display: block;
-  border: none;
-  outline: none;
-  width: 100%;
-  height: 100%;
-  font-size: 2rem;
-  z-index: 1;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.date input[type="date"]::-webkit-calendar-picker-indicator {
-  width: 100%;
-  font-size: 2rem;
-  z-index: 2;
-  opacity: 0;
-  cursor: pointer;
-  padding: 1.2rem;
- 
-}
-
-.members-input,.occasion-input,.time-input {
-  padding: 1rem;
-}
-.absolute {
-  padding: 0.5rem 1rem;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  opacity: 1;
-}
-
-.absolute span {
-  font-size: 2rem;
-  opacity: 0.6;
-}
-
-.show-input-details {
-  background-color: var(--clr-bg-1);
-  color: white;
-  opacity: 1;
-  font-weight: 500;
-}
-
-.show-input-details span {
-  opacity: 1;
-}
-
-select option {
-  font-size: 2.5rem;
-  
-} */

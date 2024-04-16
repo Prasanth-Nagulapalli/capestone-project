@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import reservationCss from "./reservations.module.css";
 import { littleLemon, HeroImg, rest3, rest_chef } from "../utils";
 import FormOne from "./Form_one";
 import FormTwo from "./Form_two";
 import ConfirmCard from "./ConfirmCard";
-// import { options } from "../utils/data";
-// import { getCurrentDate, useConsole } from "../utils/functions";
-// import { fontAwesomeIcons } from "../utils/data";
+
 
 const Reservations = () => {
   const [flag, setFlag] = useState(true);
@@ -33,7 +31,6 @@ const Reservations = () => {
     time: "",
   });
 
-  // const { diners, date, occasion, time } = reservationDetails;
   const handleChange = (e) => {
     setReservationsDetails({
       ...reservationDetails,
@@ -87,6 +84,7 @@ const Reservations = () => {
       occasion: "",
       time: "",
     });
+
     setFlag(true);
   };
 
@@ -117,7 +115,10 @@ const Reservations = () => {
     ) {
       // setConfirmFlag(true);
       handleConfirmFlag();
-      handleReset();
+      setFormErrors({});
+      setTimeout(() => {
+        handleReset();
+      }, 5000);
     } else {
       handleFormErrors();
     }
