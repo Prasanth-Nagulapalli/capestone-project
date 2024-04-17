@@ -10,11 +10,9 @@ const About = () => {
           <h2>Chicago</h2>
         </header>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
-          veritatis, ut voluptatum illo reprehenderit distinctio dolorem, atque
-          libero earum nihil nemo tenetur? Ut officiis fugit, aperiam asperiores
-          iste blanditiis necessitatibus soluta quibusdam quae, expedita
-          molestiae.
+          
+
+        Located in Chicago, Little Lemon is renowned for its delectable dishes made from fresh, local ingredients. Offering a cozy ambiance and attentive service, it's an ideal destination for casual dining or memorable gatherings. Enjoy delicious cuisine and delightful moments at Little Lemon.
         </p>
       </section>
       <section className="about_image_content">

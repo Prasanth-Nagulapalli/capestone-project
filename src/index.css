@@ -572,9 +572,12 @@ h2 {
 
 .about_text_content p {
   font-size: 2rem;
-  font-weight: 600;
-  line-height: 3rem;
+  /* font-size: clamp(1.4rem, 3vh, 2rem); */
+  font-weight: 500;
+  line-height: 3.2rem;
+  /* font-style: italic; */
   word-spacing: 0.7rem;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .about_image_content {
