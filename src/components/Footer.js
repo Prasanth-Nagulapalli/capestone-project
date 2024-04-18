@@ -12,29 +12,29 @@ const Footer = () => {
   return (
     <footer className="footer_sec">
       <div className="footer_top_nav" onClick={handleScrollToTop}>
-        <i className="fa-solid fa-arrow-up"></i>
-        <p>back To top</p>
+        <i className="fa-solid fa-arrow-up footer_top_nav_i"></i>
+        <p className="footer_back_to_top">back To top</p>
       </div>
       <section className="footer_center _max_width_center">
         <figure className="footer_logo">
           {screenWidth <= 686 ? (
             <>
-              <img loading="lazy" src={NavLogo} alt="footerImg" />{" "}
+              <img className="footer_logo_img" loading="lazy" src={NavLogo} alt="footerImg" />{" "}
               <p>
                 <span>&copy; </span>copyright - 2025
               </p>
             </>
           ) : (
-            <img loading="lazy" src={footerImg} alt="footerImg" />
+            <img className="footer_logo_img" loading="lazy" src={footerImg} alt="footerImg" />
           )}
         </figure>
         <nav className="footer_navList">
           <section className="footer_nav_section">
             <header>
-              <h1>Doormat Navigation</h1>
+              <h1  className="footer_navList_h1">Doormat Navigation</h1>
             </header>
 
-            <ul>
+            <ul className="footer_navList_ul">
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -57,9 +57,9 @@ const Footer = () => {
           </section>
           <section className="footer_nav_section">
             <header>
-              <h1>Contact</h1>
+              <h1 className="footer_navList_h1">Contact</h1>
             </header>
-            <ul>
+            <ul className="footer_navList_ul">
               <li>
                 <a href="#">Address</a>
               </li>
@@ -73,9 +73,9 @@ const Footer = () => {
           </section>
           <section className="footer_nav_section">
             <header>
-              <h1>Social Media Links</h1>
+              <h1 className="footer_navList_h1">Social Media Links</h1>
             </header>
-            <ul>
+            <ul className="footer_navList_ul">
               <li>
                 <a
                   target="_blank"

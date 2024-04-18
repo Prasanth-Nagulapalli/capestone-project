@@ -118,7 +118,7 @@ h2 {
   width: 20rem;
 }
 
-.main_nav_logo img {
+.main_nav_logo_img {
   display: block;
   width: 100%;
 }
@@ -126,23 +126,23 @@ h2 {
   gap: 2.8rem;
 }
 
-.main_nav_list li {
+.main_nav_list_li {
   font-size: 2rem;
   font-weight: var(--font-weight-medium);
   position: relative;
 }
 
-.main_nav_list li a {
+.main_nav_list_li_a {
   color: rgba(0, 0, 0, 0.5);
   transition: all 0.2s;
 }
 
-.main_nav_list li a:hover,
-.main_nav_list li a.active {
+.main_nav_list_li_a:hover,
+.main_nav_list_li_a.active {
   color: rgb(0, 0, 0, 0.9);
 }
 
-.main_nav_list li a.active::after {
+.main_nav_list_li_a.active::after {
   content: "";
   width: 100%;
   height: 2px;
@@ -170,7 +170,7 @@ h2 {
   height: 100vh;
 }
 
-.loading h1 {
+.loading_h1 {
   font-size: 3rem;
   color: #333;
   margin-left: 10px;
@@ -293,7 +293,7 @@ h2 {
   align-items: flex-start;
 }
 
-.hero_text h1 {
+.hero_text_h1 {
   color: var(--clr-heading-1);
 }
 
@@ -327,21 +327,31 @@ h2 {
 }
 .hero_Img {
   width: 37.5rem;
-
   height: 43.8rem;
+  border-radius: 4px;
   position: absolute;
   object-fit: cover;
   bottom: -55px;
   right: 0;
   z-index: 10;
+  overflow: hidden;
+  
+
 }
 
 .hero_Img img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
+  transition: all 0.4s linear;
 }
+
+.hero_Img:hover img{
+  transform: scale(1.04) rotate(1deg);
+}
+
+
+
 /* Highlights section */
 
 .highlight_section {
@@ -394,7 +404,7 @@ h2 {
   overflow: hidden;
 }
 
-.specials_card img {
+.specials_card_img_img {
   display: block;
   object-fit: cover;
   width: 100%;
@@ -402,7 +412,7 @@ h2 {
   transition: var(--transition);
 }
 
-.specials_card:hover .specials_card_img img {
+.specials_card:hover .specials_card_img_img {
   transform: scale(1.07);
 }
 
@@ -442,7 +452,6 @@ h2 {
 .special_order_delivery {
   color: rgba(0, 0, 0, 0.7);
   display: flex;
-
   gap: 2rem;
   align-items: center;
   margin: 1.2rem 0;
@@ -452,7 +461,7 @@ h2 {
   font-size: 1.6rem;
 }
 
-.special_order_delivery button {
+.special_order_delivery_button {
   border: none;
   display: block;
   transform: translateY(0.3rem);
@@ -466,16 +475,16 @@ h2 {
   margin-bottom: 10rem;
   padding: 4.5rem 0;
 }
-
-.testi_sec_center {
-  padding: 7rem 0 9rem;
-  gap: 2rem;
-}
 .testimonial_heading {
   font-size: 3.5rem;
   font-weight: 500;
   text-align: center;
 }
+.testi_sec_center {
+  padding: 7rem 0 9rem;
+  gap: 2rem;
+}
+
 
 .testi_card {
   width: 20.5rem;
@@ -497,7 +506,7 @@ h2 {
   z-index: 5;
 }
 
-.testi_img_el img {
+.testi_img_el_img {
   display: block;
   margin: 0 auto;
   width: 100px;
@@ -510,7 +519,7 @@ h2 {
   margin: 1rem 0 0.5rem;
 }
 
-.testi_img_caption h3 {
+.testi_img_caption_h3 {
   font-size: 2rem;
   font-weight: 500;
   text-align: center;
@@ -520,14 +529,14 @@ h2 {
   margin: 1rem 0;
 }
 
-.testi_text_content h3 {
+.testi_text_content_h3 {
   font-size: 1.6rem;
   color: #000000b2;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
-.testi_text_content blockquote {
+.testi_text_content_blockquote {
   font-size: 1.6rem;
 }
 
@@ -537,13 +546,13 @@ h2 {
   margin: 0.6rem 0;
 }
 
-.testi_rating_section h3 {
+.testi_rating_section_h3 {
   color: #000000b2;
   margin-right: 1rem;
   flex: 1;
 }
 
-.testi_rating_section i {
+.testi_rating_section_i {
   color: rgb(252, 32, 99);
   font-size: 1.5rem;
 }
@@ -563,14 +572,14 @@ h2 {
   grid-template-rows: 1fr 2fr;
 }
 
-.about_text_content header h2 {
+.about_text_content_header_h2 {
   font-size: 3rem;
   font-weight: 500;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif,
     "Arial Narrow", Arial, sans-serif;
 }
 
-.about_text_content p {
+.about_text_content_p {
   font-size: 2rem;
   /* font-size: clamp(1.4rem, 3vh, 2rem); */
   font-weight: 500;
@@ -585,7 +594,13 @@ h2 {
   height: 100%;
 }
 
-.about_image_content figure img {
+/* .about_image_content figure img {
+  position: absolute;
+  object-fit: cover;
+  width: 272px;
+  height: 338px;
+} */
+.about_image_img {
   position: absolute;
   object-fit: cover;
   width: 272px;
@@ -731,18 +746,25 @@ h2 {
   opacity: 0.9;
 }
 
-.footer_top_nav i {
+.footer_top_nav_i {
   font-size: 1.4rem;
   padding: 0.2rem 0;
   color: white;
   color: #74c0fc;
 }
 
-.footer_top_nav p {
+/* .footer_top_nav p {
+  font-size: 1.1rem;
+  color: white;
+  text-transform: capitalize;
+} */
+.footer_back_to_top{
   font-size: 1.1rem;
   color: white;
   text-transform: capitalize;
 }
+
+
 
 .footer_center {
   display: grid;
@@ -758,7 +780,7 @@ h2 {
   height: 100%;
 }
 
-.footer_logo img {
+.footer_logo_img {
   width: 50%;
   object-fit: cover;
 }
@@ -768,12 +790,12 @@ h2 {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5rem;
 }
-.footer_navList h1 {
+.footer_navList_h1 {
   font-size: 2rem;
   font-weight: bold;
   color: #495e57;
 }
-.footer_navList ul {
+.footer_navList_ul {
   margin-top: 0.5rem;
 }
 .footer_navList li {
@@ -802,7 +824,7 @@ h2 {
   .main_nav_list {
     gap: 2.4rem;
   }
-  .main_nav_list li {
+  .main_nav_list_li {
     font-size: 1.8rem;
   }
   /* hero section */
@@ -830,13 +852,13 @@ h2 {
     top: 0;
     z-index: 999;
   }
-  .main_nav_header nav {
+  .main_nav_header_nav {
     position: relative;
   }
   .main_nav_logo {
     width: 15rem;
   }
-  .main_nav_list li a {
+  .main_nav_list_li_a {
     padding: 0.9rem 4rem;
     border-radius: 15%;
     overflow: hidden;
@@ -860,18 +882,18 @@ h2 {
     transition: 0.18s linear;
   }
 
-  .main_nav_list li a.active::after {
+  .main_nav_list_li_a.active::after {
     width: 0;
     height: 0;
   }
 
-  .main_nav_list li a:hover {
+  .main_nav_list_li_a:hover {
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 15px 10px;
     color: #fff;
     border: 1px solid;
   }
 
-  .main_nav_list li a.active {
+  .main_nav_list_li_a.active {
     color: #2e9efa;
 
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 15px 10px;
@@ -880,7 +902,7 @@ h2 {
   .showMenu {
     right: 0;
   }
-  .main_nav_list li {
+  .main_nav_list_li {
     font-size: 2rem;
     margin: 2rem 0;
   }
@@ -893,9 +915,9 @@ h2 {
   .loading {
     align-items: normal;
   }
-  .loading h1 {
+  .loading_h1 {
     font-size: 2.5rem;
-    margin-top: 5rem;
+    margin-top: 15rem;
   }
 
   /* hero */
@@ -927,7 +949,10 @@ h2 {
     gap: 1rem;
   }
 
-  .highlight_section > header h2 {
+  /* .highlight_section > header h2 {
+    font-size: 3.2rem;
+  } */
+  .highlight_title {
     font-size: 3.2rem;
   }
   .highlight_btn {
@@ -963,7 +988,7 @@ h2 {
     order: 1;
   }
 
-  .specials_card_img button {
+  .specials_card_img_button {
     background-color: #f4ce14;
     padding: 0.6rem 1rem;
     border-radius: 10px;
@@ -976,7 +1001,7 @@ h2 {
     order: 0;
   }
 
-  .specials_card_content header {
+  .specials_card_heading_price {
     padding-right: 2rem;
   }
 
@@ -1011,12 +1036,12 @@ h2 {
     display: none;
   }
 
-  .testi_img_el img {
+  .testi_img_el_img {
     width: 75px;
     height: 75px;
   }
 
-  .testi_img_caption h3 {
+  .testi_img_caption_h3 {
     font-size: 1.5rem;
   }
 
@@ -1024,19 +1049,19 @@ h2 {
     margin: 0;
   }
 
-  .testi_text_content h3 {
+  .testi_text_content_h3 {
     font-size: 1.5rem;
     color: black;
     font-weight: 500;
     margin-bottom: 1rem;
   }
 
-  .testi_text_content blockquote {
+  .testi_text_content_blockquote {
     font-size: 1.26rem;
     line-height: 1.4rem;
   }
 
-  .testi_rating_section i {
+  .testi_rating_section_i {
     color: rgb(252, 32, 99);
     font-size: 1rem;
   }
@@ -1063,11 +1088,11 @@ h2 {
     position: static;
   }
 
-  .about_text_content header h1 {
+  .about_text_content_header_h1 {
     font-size: 2.5rem;
   }
 
-  .about_text_content header h2 {
+  .about_text_content_header_h2 {
     font-size: 1.8rem;
   }
   .about_text_content p {
@@ -1086,13 +1111,13 @@ h2 {
     overflow: hidden;
   }
 
-  .about_image_content figure {
+  .about_image_content_figure {
     position: relative;
     width: 200px;
     height: 200px;
   }
 
-  .about_image_content figure img {
+  .about_image_img {
     width: 200px;
     height: 200px;
   }
@@ -1162,7 +1187,7 @@ h2 {
     gap: 1rem;
   }
 
-  .footer_logo img {
+  .footer_logo_img {
     width: 35%;
   }
 
@@ -1199,7 +1224,7 @@ h2 {
     order: 2;
   }
 
-  .footer_navList h1 {
+  .footer_navList_h1 {
     font-size: 1.7rem;
   }
 
@@ -1225,7 +1250,7 @@ h2 {
     flex-direction: column;
   }
 
-  .hero_text header h1 {
+  .hero_text_h1 {
     font-size: 2.5rem;
     word-spacing: 0.5rem;
     letter-spacing: 0.4rem;
@@ -1261,7 +1286,7 @@ h2 {
 
   /* Highlights Section */
 
-  .highlight_section > header h2 {
+  .highlight_title {
     font-size: 2.5rem;
   }
 
@@ -1284,7 +1309,7 @@ h2 {
     font-size: 1.8rem;
   }
 
-  .specials_card_img button {
+  .specials_card_img_button {
     padding: 0.5rem 1rem;
   }
 

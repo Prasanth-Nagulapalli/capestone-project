@@ -7,8 +7,8 @@ const Card =  ({ id, img, heading, price, description }) => {
   return (
     <article className="specials_card" id={id}>
       <figure className="specials_card_img">
-        <img loading="lazy" src={img} alt={heading} />
-        {screenWidth <= 768 && <button className="_BTN_">Add +</button>}
+        <img className="specials_card_img_img" loading="lazy" src={img} alt={heading} />
+        {screenWidth <= 768 && <button className="specials_card_img_button _BTN_">Add +</button>}
       </figure>
       <section className="specials_card_content">
         <header className="specials_card_heading_price _flex_box">
@@ -25,7 +25,7 @@ const Card =  ({ id, img, heading, price, description }) => {
         <div className="special_order_delivery">
           <h2 className="special_order_title">Order a delivery</h2>
 
-          <button>
+          <button className="special_order_delivery_button">
             <i className="fa-solid fa-car-side"></i>
           </button>
         </div>

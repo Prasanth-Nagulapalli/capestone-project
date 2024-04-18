@@ -1,31 +1,5 @@
-
 import React from "react";
 import { reviewData } from "../utils/data";
-
-const Testimonial = ({ id, name, img, review }) => {
-  return (
-    <article className="testi_card" key={id}>
-      <figure className="testi_img_el">
-        <img loading="lazy" src={img} alt={name} />
-        <figcaption className="testi_img_caption">
-          <h3>{name}</h3>
-        </figcaption>
-      </figure>
-      <div className="testi_text_content">
-        <h3>Review</h3>
-        <blockquote>{review}</blockquote>
-      </div>
-      <section className="testi_rating_section _flex_box">
-        <h3>Rating </h3>
-        {[...Array(5)].map((_, index) => (
-          <span key={index}>
-            <i className="fa-solid fa-star"></i>
-          </span>
-        ))}
-      </section>
-    </article>
-  );
-};
 
 const Testimonials = () => {
   return (
@@ -39,5 +13,36 @@ const Testimonials = () => {
     </section>
   );
 };
-
 export default Testimonials;
+const Testimonial = ({ id, name, img, review }) => {
+  return (
+    <article className="testi_card" key={id}>
+      <figure className="testi_img_el">
+        <img loading="lazy" src={img} alt={name} className="testi_img_el_img"/>
+        <figcaption className="testi_img_caption">
+          <h3 className="testi_img_caption_h3">{name}</h3>
+        </figcaption>
+      </figure>
+      <div className="testi_text_content">
+        <h3 className="testi_text_content_h3">Review</h3>
+        <blockquote className="testi_text_content_blockquote">{review}</blockquote>
+      </div>
+      <section className="testi_rating_section _flex_box">
+        <h3 className="testi_rating_section_h3">Rating </h3>
+        <Stars />
+      </section>
+    </article>
+  );
+};
+
+const Stars = () => {
+  return (
+    <>
+      {[...Array(5)].map((_, index) => (
+        <span key={index}>
+          <i className="fa-solid fa-star testi_rating_section_i"></i>
+        </span>
+      ))}
+    </>
+  );
+};

@@ -19,9 +19,9 @@ const Header = () => {
   return (
     <>
       <header className="main_nav_header" id="Home_Nav">
-        <nav className="_flex_box _max_width_center">
+        <nav className="_flex_box _max_width_center main_nav_header_nav">
           <figure className="main_nav_logo">
-            <img loading="lazy" src={NavLogo} alt="Restaurant Logo" />
+            <img loading="lazy" src={NavLogo} alt="Restaurant Logo" className="main_nav_logo_img" />
           </figure>
 
           <div className="nav_bars">
@@ -38,8 +38,8 @@ const Header = () => {
             }
           >
             {navData.map((item) => (
-              <li key={item.name}>
-                <NavLink to={item.path} onClick={handleLink}>
+              <li key={item.name} className="main_nav_list_li">
+                <NavLink to={item.path} onClick={handleLink} className={"main_nav_list_li_a"}>
                   {item.name}
                 </NavLink>
               </li>
