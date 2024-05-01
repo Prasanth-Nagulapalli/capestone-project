@@ -61,7 +61,7 @@ export const navData = [
   { name: "About", path: "/about" },
   { name: "Menu", path: "/menu" },
   { name: "Reservations", path: "/reservations" },
-  { name: "Order Online", path: "/order online" },
+  { name: "Order Online", path: "/orderonline" },
   { name: "Login", path: "/Login" },
 ];
 

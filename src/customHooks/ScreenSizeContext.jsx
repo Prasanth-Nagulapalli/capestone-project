@@ -7,22 +7,25 @@ const ScreenSizeProvider = ({ children }) => {
     screenWidth: window.innerWidth,
     screenHeight: window.innerHeight,
   });
-
+  const handleSize = () => {
+    setScreenSize({
+      screenWidth: window.innerWidth,
+      screenHeight: window.innerHeight,
+    });
+  };
   useEffect(() => {
-    const handleSize = () => {
-      setScreenSize({
-        screenWidth: window.innerWidth,
-        screenHeight: window.innerHeight,
-      });
-    };
-    handleSize();
+    // handleSize();
 
     window.addEventListener("resize", handleSize);
 
     return () => window.removeEventListener("resize", handleSize);
   }, []);
 
-  return <ScreenSizeContext.Provider value={screenSize}>{children}</ScreenSizeContext.Provider>;
+  return (
+    <ScreenSizeContext.Provider value={screenSize}>
+      {children}
+    </ScreenSizeContext.Provider>
+  );
 };
 
 export const useScreenSize = () => useContext(ScreenSizeContext);

@@ -5,6 +5,7 @@ import About from '../pages/About';
 import NotFound from '../components/NotFound';
 import Reservations from '../reservations/Reservations';
 import Login from '../components/Login';
+import Order from '../orderOnline/Order';
 
 
 
@@ -16,6 +17,7 @@ const AppRoutes = () => {
       <Route path='/about' element={<About />}/>
       <Route path='/reservations' element={<Reservations />}/>
       <Route path='/login' element={<Login />} />
+      <Route path='/orderonline' element={<Order />} />
       <Route path='*' element={<NotFound />} />
       </Routes>   
     </>

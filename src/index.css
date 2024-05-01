@@ -41,6 +41,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   width: 100%;
+  /* line-height: 1.6; */
 }
 
 code {
@@ -1087,7 +1088,8 @@ h2 {
 
   .testi_text_content_blockquote {
     font-size: 1.26rem;
-    line-height: 1.4rem;
+    line-height: 1.5;
+    
   }
 
   .testi_rating_section_i {
