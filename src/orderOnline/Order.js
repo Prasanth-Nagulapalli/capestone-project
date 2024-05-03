@@ -93,7 +93,10 @@ const Order = () => {
               <div className="order_online_item_rating_container">
                 <h3>Item Name</h3>
                 <p>
+                  <span>
+
                   4.5{" "}
+                  </span>
                   <span className="order_online_rating_i">
                     <i className="fa-solid fa-star"></i>
                   </span>

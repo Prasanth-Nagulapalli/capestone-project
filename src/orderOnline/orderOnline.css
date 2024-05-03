@@ -106,8 +106,6 @@
   gap: 1.5rem;
 }
 
-
-
 .order_online_card_main {
   padding: 0.9rem;
   width: 265px;
@@ -117,7 +115,6 @@
   transition: 0.1s ease;
   display: grid;
   grid-template-rows: 2fr 0.5fr;
-  
 }
 
 .order_online_card_main:hover {
@@ -126,8 +123,8 @@
 }
 
 .order_online_card_content {
- display: flex;
- flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .order_online_card_content img {
@@ -161,12 +158,16 @@
   background-color: #267e3e;
   padding: 0 0.25rem;
   border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
 }
 
 .order_online_rating_i {
   font-size: 1.1rem;
-  display: inline-block;
-  transform: translateY(-2px);
+  /* display: inline-block; */
+  /* transform: translateY(1px); */
 }
 
 .order_online_card_price_btn_container {
@@ -197,33 +198,135 @@
   font-size: 1.5rem;
 }
 
-
-@media screen and (max-width: 667px) {
-  .order_online_card_container{
-    gap: 2rem;
-    justify-content: flex-start;
-    justify-content: center;
-    justify-content: space-around;
-    justify-content: space-between;
+@media screen and (max-width: 686px) {
+  .order_online_card_container {
     flex-wrap: wrap;
+    gap: 0;
   }
-  .order_online_card_container:last-child::after {
-    content: "";
-    visibility: hidden;
-    padding: 0.9rem;
-    width: 265px;
+
+  .order_online_card_main {
+    width: 47%;
+    margin-bottom: 2rem;
   }
-  
 }
 
 @media screen and (max-width: 500px) {
-  .order_online_card_container{
-    flex-direction: column;
-    gap: 5rem;
+  .order_online_header_p {
+    font-size: 2rem;
+    color: rgba(60, 47, 47, 0.9);
   }
-  .order_online_card_main {
-    padding: 0.9rem;
+  .order_online_search_container {
+    padding: 0;
+    border-radius: 18px;
     width: 100%;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* display: flex;
+  align-items: center; */
+    color: #3c2f2f;
+    /* border: 2px solid; */
+  }
+  .order_online_search-bar {
+    padding: 0;
+    padding-left: 1.5rem;
+    box-shadow: none;
+  }
 
+  .fa-magnifying-glass {
+    display: none;
+  }
+
+  .order_online_btn {
+    border-radius: 0px;
+    padding: 1rem 2.5rem;
+  }
+
+  .order_online_filter_btn_container {
+    max-width: 655px;
+    /* border: 2px solid; */
+    padding: 0.8rem 0 0.1rem;
+    margin: 1.2rem 0 0;
+    /* border: 2px solid; */
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: space-around;
+    justify-content: space-evenly; */
+    align-items: center;
+    /* gap: 3rem; */
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+
+  .order_online_filter_btn_container button {
+    padding: 1rem 2.5rem;
+    font-size: 1.4rem;
+  }
+  .order_online_card_container {
+    padding-top: 0.5rem;
+    margin-top: 1rem;
+    /* border: 2px solid; */
+  }
+
+  .order_online_card_main {
+    width: 48%;
+    margin-bottom: 1.9rem;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    box-shadow: rgba(50, 50, 93, 0.2) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.25) 0px 8px 16px -8px;
+    box-shadow: rgba(50, 50, 93, 0.2) 0px 5px 27px -5px,
+      rgba(0, 0, 0, 0.25) 0px 8px 16px -8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .order_online_card_main {
+    padding: 0.6rem;
+  }
+  .order_online_item_rating_container {
+    padding: 0.25rem 0 0.2rem;
+    margin: 0.25rem 0 0.2rem;
+  }
+  .order_online_card_price_btn_container {
+    /* padding: 0.2rem 0.2rem;
+    padding: 0.2rem 0; */
+    padding: 0;
+  }
+  .order_online_item_price {
+    font-size: 1.3rem;
+    color: rgba(60, 47, 47, 0.5);
+  }
+  .order_online_add_btn {
+    padding: 0.4rem 1rem;
+    font-size: 1.3rem;
+  }
+  .order_online_card_item_type {
+    font-size: 1.3rem;
+    color: #6a6a6a;
+    letter-spacing: 0.2rem;
+  }
+  .order_online_last_container {
+    margin-top: 0.25rem;
+  }
+  .order_online_card_content h3 {
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.65);
+  }
+  .order_online_card_content p {
+    font-size: 1.2rem;
+    padding: 0.1rem 0.2rem;
+    gap: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .order_online_rating_i {
+    font-size: 1rem;
+    /* display: inline-block;
+    transform: translateY(0); */
   }
 }
