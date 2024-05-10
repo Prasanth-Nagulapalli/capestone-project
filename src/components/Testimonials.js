@@ -14,18 +14,25 @@ const Testimonials = () => {
   );
 };
 export default Testimonials;
-const Testimonial = ({ id, name, img, review }) => {
+const Testimonial = ({ id, name, midImg, review }) => {
   return (
     <article className="testi_card" key={id}>
       <figure className="testi_img_el">
-        <img loading="lazy" src={img} alt={name} className="testi_img_el_img"/>
+        <img
+          loading="lazy"
+          src={midImg}
+          alt={name}
+          className="testi_img_el_img"
+        />
         <figcaption className="testi_img_caption">
           <h3 className="testi_img_caption_h3">{name}</h3>
         </figcaption>
       </figure>
       <div className="testi_text_content">
         <h3 className="testi_text_content_h3">Review</h3>
-        <blockquote className="testi_text_content_blockquote">{review}</blockquote>
+        <blockquote className="testi_text_content_blockquote">
+          {review}
+        </blockquote>
       </div>
       <section className="testi_rating_section _flex_box">
         <h3 className="testi_rating_section_h3">Rating </h3>

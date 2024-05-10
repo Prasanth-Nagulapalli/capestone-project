@@ -1,14 +1,21 @@
 import React from "react";
 import { useScreenSize } from "../customHooks/ScreenSizeContext";
 
-const Card =  ({ id, img, heading, price, description }) => {
+const Card = ({ id, midImg, heading, price, description }) => {
   const { screenWidth } = useScreenSize();
 
   return (
     <article className="specials_card" id={id}>
       <figure className="specials_card_img">
-        <img className="specials_card_img_img" loading="lazy" src={img} alt={heading} />
-        {screenWidth <= 768 && <button className="specials_card_img_button _BTN_">Add +</button>}
+        <img
+          className="specials_card_img_img"
+          loading="lazy"
+          src={midImg}
+          alt={heading}
+        />
+        {screenWidth <= 768 && (
+          <button className="specials_card_img_button _BTN_">Add +</button>
+        )}
       </figure>
       <section className="specials_card_content">
         <header className="specials_card_heading_price _flex_box">

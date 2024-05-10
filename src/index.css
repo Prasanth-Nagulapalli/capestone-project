@@ -131,6 +131,115 @@ h2 {
   display: none;
 }
 
+
+/* spinners */
+.loader {
+  width: 8px;
+  height: 40px;
+  border-radius: 4px;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  background: currentColor;
+  color: rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  animation: animloader 0.3s 0.3s linear infinite alternate;
+}
+
+.loader::after, .loader::before {
+  content: '';
+  width: 8px;
+  height: 40px;
+  border-radius: 4px;
+  background: currentColor;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  box-sizing: border-box;
+  animation: animloader 0.3s  0.45s  linear infinite alternate;
+}
+.loader::before {
+  left: -20px;
+  animation-delay: 0s;
+}
+
+@keyframes animloader {
+  0%   { height: 48px} 
+  100% { height: 4px}
+}
+
+
+
+/* spinners close */
+
+/* Shine */
+.image-wrapper {
+  /* height: 12rem;
+  width: 12rem; */
+  border-radius: 6px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  /* text-align: center;
+  line-height: 1.6; */
+}
+.image-wrapper img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  filter: blur(4px);
+  /* filter: drop-shadow(2); */
+  /* backdrop-filter: blur(25px); */
+  transition: 22s;
+  
+}
+
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+.shine:before {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: -75%;
+  position: absolute;
+  top: 0;
+  transform: skewX(-25deg);
+  width: 50%;
+  z-index: 2;
+}
+.shine::before, .shine::before {
+  -webkit-animation: shine 0.85s infinite; /* For Safari and Chrome */
+  animation: shine 0.85s infinite;
+}
+/* .shine:hover::before, .shine:focus::before {
+  -webkit-animation: shine 0.85s;
+          animation: shine 0.85s;
+} */
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+
+/* Shine close */
+
+
+
+
+
+
+
+
 /* NavBar */
 
 .main_nav_header {
@@ -374,12 +483,18 @@ h2 {
   overflow: hidden;
 }
 
-.hero_Img img {
+.hero_Img img, .hero_img_image_wrapper {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: all 0.4s linear;
 }
+.hero_img_image_wrapper{
+  background-color: black;
+  border-radius: unset;
+  
+}
+
 
 .hero_Img:hover img {
   transform: scale(1.04) rotate(1deg);

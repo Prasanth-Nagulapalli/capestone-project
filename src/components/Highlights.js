@@ -1,7 +1,6 @@
 import React from "react";
 import Card from "./Card";
 import { specialDishes } from "../utils/data";
-// const Card = React.lazy(() => import ('./Card'))
 
 const Highlights = () => {
   return (
@@ -14,17 +13,7 @@ const Highlights = () => {
       </header>
       <section className="highlight_card_container">
         {specialDishes.map((item) => {
-          const { id, img, heading, price, description } = item;
-          return (
-            <Card
-              key={id}
-              id={id}
-              img={img}
-              heading={heading}
-              price={price}
-              description={description}
-            />
-          );
+          return <Card {...item} />;
         })}
       </section>
     </section>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import reservationCss from "./reservations.module.css";
-import { littleLemon, HeroImg, rest3, rest_chef } from "../utils";
+import { littleLemon, HeroImg_mid, rest3_mid, rest_chef_mid } from "../utils";
 import FormOne from "./Form_one";
 import FormTwo from "./Form_two";
 import ConfirmCard from "./ConfirmCard";
@@ -181,9 +181,9 @@ const Reservations = () => {
         className={`${reservation_form_img_container} _max_width_center`}
       >
         <figure>
-          <img src={rest3} alt="restaurant" />
-          <img src={rest_chef} alt="chef" />
-          <img src={HeroImg} alt="HeroImg" />
+          <img src={rest3_mid} alt="restaurant" />
+          <img src={rest_chef_mid} alt="chef" />
+          <img src={HeroImg_mid} alt="HeroImg" />
         </figure>
       </section>
       <section className={`${reservation_btn_container} _max_width_center`}>
