@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { ReactTyped } from "react-typed";
 const FoodItem = ({ id, title, minImg, midImg, type, rating, price }) => {
   const [inView, setInView] = useState(false);
@@ -31,14 +32,15 @@ const FoodItem = ({ id, title, minImg, midImg, type, rating, price }) => {
   useEffect(() => {
     let timeoutId;
     const observer = new IntersectionObserver((entries, obs) => {
-      console.log(typeof entries);
+      // console.log(typeof entries);
 
       for (const entry of entries) {
         if (entry.isIntersecting) {
+        
           timeoutId = setTimeout(() => {
             setInView(true);
+            obs.disconnect();
           }, 400);
-          obs.disconnect();
         }
       }
     }, {});
@@ -56,7 +58,9 @@ const FoodItem = ({ id, title, minImg, midImg, type, rating, price }) => {
       <article className="order_online_card_main">
         <div className="order_online_card_content">
           {inView ? (
-            <img src={midImg} alt="lemon" />
+            <Link to={`/orderonline/${id}`}>
+            <img src={midImg} alt="lemon"/>
+            </Link>
           ) : (
             <div
               className="image-wrapper shine order_online_image-wrapper"
@@ -65,13 +69,16 @@ const FoodItem = ({ id, title, minImg, midImg, type, rating, price }) => {
               <img
                 src={minImg}
                 alt="mini"
-                style={{ width: "100%", height: "100%" }}
+                style={{ width: "100%", height: "100%"  }}
+                
               />
             </div>
           )}
 
           <div className="order_online_item_rating_container">
-            <h3>{title}</h3>
+            <Link to={`/orderonline/${id}`}>
+              <h3>{title}</h3>
+            </Link>
             <p>
               {rating}{" "}
               <span className="order_online_rating_i">

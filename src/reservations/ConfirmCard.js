@@ -6,7 +6,7 @@ const ConfirmCard = () => {
     <article className={confirm_card}>
       <h1>Your Reservation has been confirmed</h1>
       <h2>
-        Check your Email <i class="fa-regular fa-envelope"></i>
+        Check your Email <i className="fa-regular fa-envelope"></i>
       </h2>
     </article>
   );

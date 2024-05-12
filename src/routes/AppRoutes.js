@@ -6,6 +6,7 @@ import NotFound from '../components/NotFound';
 import Reservations from '../reservations/Reservations';
 import Login from '../components/Login';
 import Order from '../orderOnline/Order';
+import SingleComponent from '../components/SingleComponent';
 
 
 
@@ -18,6 +19,7 @@ const AppRoutes = () => {
       <Route path='/reservations' element={<Reservations />}/>
       <Route path='/login' element={<Login />} />
       <Route path='/orderonline' element={<Order />} />
+      <Route path='/orderonline/:id' element={<SingleComponent />} />
       <Route path='*' element={<NotFound />} />
       </Routes>   
     </>

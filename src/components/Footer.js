@@ -19,19 +19,29 @@ const Footer = () => {
         <figure className="footer_logo">
           {screenWidth <= 686 ? (
             <>
-              <img className="footer_logo_img" loading="lazy" src={NavLogo} alt="footerImg" />{" "}
+              <img
+                className="footer_logo_img"
+                loading="lazy"
+                src={NavLogo}
+                alt="footerImg"
+              />{" "}
               <p>
                 <span>&copy; </span>copyright - 2025
               </p>
             </>
           ) : (
-            <img className="footer_logo_img" loading="lazy" src={footerImg} alt="footerImg" />
+            <img
+              className="footer_logo_img"
+              loading="lazy"
+              src={footerImg}
+              alt="footerImg"
+            />
           )}
         </figure>
         <nav className="footer_navList">
           <section className="footer_nav_section">
             <header>
-              <h1  className="footer_navList_h1">Doormat Navigation</h1>
+              <h1 className="footer_navList_h1">Doormat Navigation</h1>
             </header>
 
             <ul className="footer_navList_ul">
@@ -61,13 +71,13 @@ const Footer = () => {
             </header>
             <ul className="footer_navList_ul">
               <li>
-                <a href="#">Address</a>
+                <Link>Address</Link>
               </li>
               <li>
-                <a href="#">Phone</a>
+                <Link>Phone</Link>
               </li>
               <li>
-                <a href="#">Email</a>
+                <Link>Email</Link>
               </li>
             </ul>
           </section>
@@ -95,7 +105,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#">Instagram</a>
+                <Link>Instagram</Link>
               </li>
             </ul>
           </section>

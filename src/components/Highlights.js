@@ -13,7 +13,7 @@ const Highlights = () => {
       </header>
       <section className="highlight_card_container">
         {specialDishes.map((item) => {
-          return <Card {...item} />;
+          return <Card key={item.id} {...item} />;
         })}
       </section>
     </section>
