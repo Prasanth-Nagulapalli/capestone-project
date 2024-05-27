@@ -3,7 +3,7 @@ import { useScreenSize } from "../customHooks/ScreenSizeContext";
 import { Link } from "react-router-dom";
 
 const NotFound = () => {
-  const { screenWidth } = useScreenSize();
+  const { screenWidth } = useScreenSize().screenSize;
 
   const Styles = {
     background: "#fff",

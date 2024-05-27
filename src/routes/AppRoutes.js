@@ -7,6 +7,7 @@ import Reservations from '../reservations/Reservations';
 import Login from '../components/Login';
 import Order from '../orderOnline/Order';
 import SingleComponent from '../components/SingleComponent';
+import Cart from '../components/Cart'
 
 
 
@@ -16,6 +17,7 @@ const AppRoutes = () => {
      <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/about' element={<About />}/>
+      <Route path='/cart' element={<Cart />} />
       <Route path='/reservations' element={<Reservations />}/>
       <Route path='/login' element={<Login />} />
       <Route path='/orderonline' element={<Order />} />

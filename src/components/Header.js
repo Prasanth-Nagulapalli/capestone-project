@@ -3,9 +3,9 @@ import { useScreenSize } from "../customHooks/ScreenSizeContext";
 import { NavLink } from "react-router-dom";
 import { NavLogo } from "../utils";
 import { navData } from "../utils/data";
-
 const Header = () => {
-  const { screenWidth } = useScreenSize();
+  const { screenSize } = useScreenSize();
+  const {screenWidth} = screenSize
   const [show, setShow] = useState(true);
 
   const showMenu = () => {
@@ -13,7 +13,9 @@ const Header = () => {
   };
 
   const handleLink = () => {
-    setShow(true);
+    setTimeout(() => {
+      setShow(true);
+    },50)
   };
 
   return (
@@ -39,8 +41,10 @@ const Header = () => {
           >
             {navData.map((item) => (
               <li key={item.name} className="main_nav_list_li">
+               
                 <NavLink to={item.path} onClick={handleLink} className={"main_nav_list_li_a"}>
-                  {item.name}
+                <span className="main_nav_list_icons"  dangerouslySetInnerHTML={{ __html: item.icon }}></span>
+                 <span>{item.name}</span> 
                 </NavLink>
               </li>
             ))}

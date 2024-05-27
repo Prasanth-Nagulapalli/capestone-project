@@ -2,7 +2,9 @@ import React from "react";
 import { useScreenSize } from "../customHooks/ScreenSizeContext";
 
 const Card = ({ id, midImg, heading, price, description }) => {
-  const { screenWidth } = useScreenSize();
+  const {screenWidth } = useScreenSize().screenSize;
+        
+
 
   return (
     <article className="specials_card" id={id}>

@@ -1,12 +1,38 @@
-import React, { useEffect, useState } from "react";
+import React, {  useCallback, useEffect, useState } from "react";
 import "./orderOnline.css";
 import fooditems from "../utils/foodItems";
 import FoodItem from "./FoodItem";
-import { Link } from "react-router-dom";
-
+import {useScreenSize} from "../customHooks/ScreenSizeContext"
 const Order = () => {
   const [foodList, setFoodList] = useState([]);
   const [bool, setBool] = useState("all");
+  const {addItems,ids,updateGroupedItems} = useScreenSize();
+  const [itemsCount, setItemsCount] = useState([])
+  
+
+  const updateItems = useCallback((valuesArray) => {
+    const groupedItems = valuesArray.reduce((acc, value) => {
+      if (!acc[value]) {
+        acc[value] = { name: value, values: [] };
+      }
+      acc[value].values.push(value);
+      return acc;
+    }, {});
+    
+    // Convert grouped items from object to array
+    const itemsArray = Object.values(groupedItems);
+    setItemsCount(itemsArray);
+    updateGroupedItems(itemsArray)
+  },[]);
+
+  // Call updateItems with the values array
+  useEffect(() => {
+    updateItems(ids);
+  }, [ids, updateItems]);
+
+
+
+
   const handleFilter = (type) => {
     let filterdList;
     if (type === "all") {
@@ -54,6 +80,9 @@ const Order = () => {
     setFoodList(fooditems);
   }, []);
 
+
+
+
   return (
     <section className="_max_width_center order_online">
       <div className="order_online_container">
@@ -90,7 +119,7 @@ const Order = () => {
 
         <div className="order_online_card_container">
           {foodList.map((item) => {
-            return <FoodItem key={item.id} {...item} />;
+            return <FoodItem key={item.id} {...item} addItems={addItems} itemsCount={itemsCount} />;
           })}
         </div>
       </div>

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { footerImg, NavLogo } from "../utils";
 import { useScreenSize } from "../customHooks/ScreenSizeContext";
 const Footer = () => {
-  const { screenWidth } = useScreenSize();
-
+  const { screenSize} = useScreenSize();
+  const {screenWidth} = screenSize 
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };

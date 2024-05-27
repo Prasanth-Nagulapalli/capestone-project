@@ -1,9 +1,36 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ReactTyped } from "react-typed";
-const FoodItem = ({ id, title, minImg, midImg, type, rating, price }) => {
+import { useScreenSize } from "../customHooks/ScreenSizeContext";
+
+
+const FoodItem = ({
+  id,
+  title,
+  minImg,
+  midImg,
+  type,
+  rating,
+  price,
+  addItems,
+  itemsCount
+}) => {
   const [inView, setInView] = useState(false);
+  const [itemCount, setItemCount] = useState(0);
+  const {screenWidth} = useScreenSize().screenSize
+  const {deleteItems} = useScreenSize()
+ 
   const placeholderRef = useRef();
+  
+  // console.log(itemCount);
+ useEffect(() => {
+  let item = itemsCount.find((item) => item.name === id)
+  if(item) {
+    setItemCount(item.values.length)
+  }
+  
+ },[id, itemsCount])
+
   // useEffect(() => {
   //   try {
   //     const observer = new IntersectionObserver((entries, obs) => {
@@ -36,7 +63,6 @@ const FoodItem = ({ id, title, minImg, midImg, type, rating, price }) => {
 
       for (const entry of entries) {
         if (entry.isIntersecting) {
-        
           timeoutId = setTimeout(() => {
             setInView(true);
             obs.disconnect();
@@ -53,13 +79,21 @@ const FoodItem = ({ id, title, minImg, midImg, type, rating, price }) => {
     };
   }, []);
 
+  const increaseCount  = () =>{
+       setItemCount((prev) => prev + 1)
+  }
+  
+  const decreaseCount = () => {
+    setItemCount((prev) => prev - 1)
+  }
+
   return (
     <>
       <article className="order_online_card_main">
         <div className="order_online_card_content">
           {inView ? (
             <Link to={`/orderonline/${id}`}>
-            <img src={midImg} alt="lemon"/>
+              <img src={midImg} alt="lemon" />
             </Link>
           ) : (
             <div
@@ -69,8 +103,7 @@ const FoodItem = ({ id, title, minImg, midImg, type, rating, price }) => {
               <img
                 src={minImg}
                 alt="mini"
-                style={{ width: "100%", height: "100%"  }}
-                
+                style={{ width: "100%", height: "100%" }}
               />
             </div>
           )}
@@ -103,7 +136,41 @@ const FoodItem = ({ id, title, minImg, midImg, type, rating, price }) => {
             </div>
             <div className="order_online_last_container">
               <p className="order_online_item_price">₹ {price} for one</p>
-              <button className="order_online_add_btn _BTN_">Add +</button>
+
+              {itemCount > 0  && screenWidth >= 500? (
+                <div className="order_online_add_remove_btn">
+                  <button
+                    className=""
+                    onClick={() => {
+                      deleteItems(price, id);
+                      decreaseCount();
+                    }}
+                  >
+                    <i className="fa-solid fa-trash"></i>
+                  </button>
+                  <span>{itemCount}</span>
+
+                  <button
+                    className=""
+                    onClick={() => {
+                      addItems(price, id);
+                      increaseCount();
+                    }}
+                  >
+                    <i className="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              ) : (
+                <button
+                  className="order_online_add_btn _BTN_"
+                  onClick={() => {
+                    addItems(price, id);
+                    increaseCount();
+                  }}
+                >
+                  Add +
+                </button>
+              )}
             </div>
           </div>
         </footer>

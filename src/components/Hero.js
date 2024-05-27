@@ -1,11 +1,12 @@
 import React from "react";
 import { useScreenSize } from "../customHooks/ScreenSizeContext";
-import { HeroImg_mid } from "../utils";
+import { HeroImg_mid } from "../utils/index";
 import { useNavigate } from "react-router-dom";
 import { ReactTyped } from "react-typed";
 const Hero = () => {
-  const { screenWidth } = useScreenSize();
+  const { screenSize } = useScreenSize();
   const navigate = useNavigate();
+  const {screenWidth} = screenSize
 
   return (
     <section className="hero_section">

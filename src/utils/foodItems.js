@@ -222,6 +222,7 @@ const fooditems = [
     minImg:veggie_min_2kb,
     type: "veggie",
     rating: 4.3,
+    price: 140,
   },
   {
     id: 14,

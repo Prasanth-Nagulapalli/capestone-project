@@ -131,7 +131,6 @@ h2 {
   display: none;
 }
 
-
 /* spinners */
 .loader {
   width: 8px;
@@ -146,8 +145,9 @@ h2 {
   animation: animloader 0.3s 0.3s linear infinite alternate;
 }
 
-.loader::after, .loader::before {
-  content: '';
+.loader::after,
+.loader::before {
+  content: "";
   width: 8px;
   height: 40px;
   border-radius: 4px;
@@ -157,7 +157,7 @@ h2 {
   transform: translateY(-50%);
   left: 20px;
   box-sizing: border-box;
-  animation: animloader 0.3s  0.45s  linear infinite alternate;
+  animation: animloader 0.3s 0.45s linear infinite alternate;
 }
 .loader::before {
   left: -20px;
@@ -165,11 +165,13 @@ h2 {
 }
 
 @keyframes animloader {
-  0%   { height: 48px} 
-  100% { height: 4px}
+  0% {
+    height: 48px;
+  }
+  100% {
+    height: 4px;
+  }
 }
-
-
 
 /* spinners close */
 
@@ -192,7 +194,6 @@ h2 {
   /* filter: drop-shadow(2); */
   /* backdrop-filter: blur(25px); */
   transition: 22s;
-  
 }
 
 .shine {
@@ -200,7 +201,11 @@ h2 {
   overflow: hidden;
 }
 .shine:before {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
   content: "";
   display: block;
   height: 100%;
@@ -211,7 +216,8 @@ h2 {
   width: 50%;
   z-index: 2;
 }
-.shine::before, .shine::before {
+.shine::before,
+.shine::before {
   -webkit-animation: shine 0.85s infinite; /* For Safari and Chrome */
   animation: shine 0.85s infinite;
 }
@@ -230,15 +236,7 @@ h2 {
   }
 }
 
-
 /* Shine close */
-
-
-
-
-
-
-
 
 /* NavBar */
 
@@ -305,6 +303,10 @@ h2 {
 
 .nav_bars i:active {
   background-color: none;
+}
+
+.main_nav_list_icons {
+  display: none;
 }
 
 /* Loading */
@@ -483,18 +485,17 @@ h2 {
   overflow: hidden;
 }
 
-.hero_Img img, .hero_img_image_wrapper {
+.hero_Img img,
+.hero_img_image_wrapper {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: all 0.4s linear;
 }
-.hero_img_image_wrapper{
+.hero_img_image_wrapper {
   background-color: black;
   border-radius: unset;
-  
 }
-
 
 .hero_Img:hover img {
   transform: scale(1.04) rotate(1deg);
@@ -1004,27 +1005,46 @@ h2 {
     width: 15rem;
   }
   .main_nav_list_li_a {
-    padding: 0.9rem 4rem;
-    border-radius: 15%;
+    padding: 1rem 2rem;
+    /* border-top-right-radius: 2px; */
+    /* border-bottom-right-radius: 18px; */
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
     overflow: hidden;
-    color: #fff;
+    color: rgba(0, 0, 0, .7);
+    
   }
+
   .main_nav_list {
-    padding: 5rem;
-    text-align: center;
-    color: #fff;
-    background-color: rgb(0, 0, 0, 0.4);
+    padding: 2rem 0;
+    border-left: 25px solid rgba(0, 0, 0, 0.1);
+    width: 85%;
+    height: 100%;
+    background-color: white;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
     gap: 0.5rem;
     position: fixed;
     right: -250rem;
     top: 5.4538rem;
-    width: 100%;
-    height: 100%;
     z-index: 99;
-    backdrop-filter: blur(25px);
     transition: 0.18s linear;
+    box-shadow: rgba(17, 12, 46, 0.5) 0px 48px 5px 0px;
+    overflow: hidden;
+    /* backdrop-filter: blur(25px); */
+  }
+
+  .main_nav_list_icons {
+    display: inline;
+    padding-right: 1rem;
+    margin-right: 2rem;
+  }
+
+  .main_nav_list_icons svg {
+    width: 22px;
+    height: 22px;
+    transform: translateY(4px);
   }
 
   .main_nav_list_li_a.active::after {
@@ -1032,16 +1052,14 @@ h2 {
     height: 0;
   }
 
-  .main_nav_list_li_a:hover {
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 15px 10px;
-    color: #fff;
-    border: 1px solid;
-  }
-
   .main_nav_list_li_a.active {
+    /* color: rgba(244, 207, 20, 0.911);
+    color: white;
+    color: #f4ce14;
+    color: rgba(46, 158, 250, 0.9);
     color: #2e9efa;
-
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 15px 10px;
+    color: #bedb0a; */
+    color: rgba(191, 219, 10, 0.8);
     background-color: rgba(0, 0, 0, 0.8);
   }
   .showMenu {
@@ -1097,6 +1115,7 @@ h2 {
   /* .highlight_section > header h2 {
     font-size: 3.2rem;
   } */
+
   .highlight_title {
     font-size: 3.2rem;
   }
@@ -1204,7 +1223,6 @@ h2 {
   .testi_text_content_blockquote {
     font-size: 1.26rem;
     line-height: 1.5;
-    
   }
 
   .testi_rating_section_i {
