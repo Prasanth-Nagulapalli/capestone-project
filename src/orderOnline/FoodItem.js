@@ -3,33 +3,22 @@ import { Link } from "react-router-dom";
 import { ReactTyped } from "react-typed";
 import { useScreenSize } from "../customHooks/ScreenSizeContext";
 
-
-const FoodItem = ({
-  id,
-  title,
-  minImg,
-  midImg,
-  type,
-  rating,
-  price,
-  addItems,
-  itemsCount
-}) => {
+const FoodItem = ({ id, title, minImg, midImg, type, rating, price }) => {
   const [inView, setInView] = useState(false);
   const [itemCount, setItemCount] = useState(0);
-  const {screenWidth} = useScreenSize().screenSize
-  const {deleteItems} = useScreenSize()
- 
+  const { screenWidth } = useScreenSize().screenSize;
+  const { addItems, deleteItems, groupedItems } = useScreenSize();
+
   const placeholderRef = useRef();
-  
-  // console.log(itemCount);
- useEffect(() => {
-  let item = itemsCount.find((item) => item.name === id)
-  if(item) {
-    setItemCount(item.values.length)
-  }
-  
- },[id, itemsCount])
+
+  useEffect(() => {
+    let item = groupedItems.find((item) => item.name === id);
+    if (item) {
+      setItemCount(item.values.length);
+    } else {
+      setItemCount(0);
+    }
+  }, [id, groupedItems]);
 
   // useEffect(() => {
   //   try {
@@ -79,14 +68,6 @@ const FoodItem = ({
     };
   }, []);
 
-  const increaseCount  = () =>{
-       setItemCount((prev) => prev + 1)
-  }
-  
-  const decreaseCount = () => {
-    setItemCount((prev) => prev - 1)
-  }
-
   return (
     <>
       <article className="order_online_card_main">
@@ -135,15 +116,15 @@ const FoodItem = ({
               </p>
             </div>
             <div className="order_online_last_container">
-              <p className="order_online_item_price">₹ {price} for one</p>
+              <p className="order_online_item_price">₹ {price} {screenWidth < 400 &&itemCount > 0 ? "" :   "for one"}</p>
 
-              {itemCount > 0  && screenWidth >= 500? (
+              {/* {itemCount > 0 && screenWidth >= 500 ? ( */}
+              {itemCount > 0 && true ? (
                 <div className="order_online_add_remove_btn">
                   <button
                     className=""
                     onClick={() => {
                       deleteItems(price, id);
-                      decreaseCount();
                     }}
                   >
                     <i className="fa-solid fa-trash"></i>
@@ -154,7 +135,6 @@ const FoodItem = ({
                     className=""
                     onClick={() => {
                       addItems(price, id);
-                      increaseCount();
                     }}
                   >
                     <i className="fa-solid fa-plus"></i>
@@ -165,7 +145,6 @@ const FoodItem = ({
                   className="order_online_add_btn _BTN_"
                   onClick={() => {
                     addItems(price, id);
-                    increaseCount();
                   }}
                 >
                   Add +

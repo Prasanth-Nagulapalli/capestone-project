@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { footerImg, NavLogo } from "../utils";
 import { useScreenSize } from "../customHooks/ScreenSizeContext";
 const Footer = () => {
-  const { screenSize} = useScreenSize();
-  const {screenWidth} = screenSize 
+  const { screenSize } = useScreenSize();
+  const { screenWidth } = screenSize;
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -16,7 +16,7 @@ const Footer = () => {
         <p className="footer_back_to_top">back To top</p>
       </div>
       <section className="footer_center _max_width_center">
-        <figure className="footer_logo">
+        <figure className="footer_logo" >
           {screenWidth <= 686 ? (
             <>
               <img
@@ -35,6 +35,7 @@ const Footer = () => {
               loading="lazy"
               src={footerImg}
               alt="footerImg"
+              style={{paddingTop:"0.5rem"}}
             />
           )}
         </figure>

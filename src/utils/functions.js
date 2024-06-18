@@ -22,3 +22,8 @@ export const useConsole = (value) => {
 export const toUpper = (str) => {
   return str[0].toUpperCase() + str.slice(1);
 };
+
+
+export function randomRange(myMin, myMax) {
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}

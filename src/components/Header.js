@@ -7,7 +7,8 @@ const Header = () => {
   const { screenSize } = useScreenSize();
   const {screenWidth} = screenSize
   const [show, setShow] = useState(true);
-
+  
+  const {itemsCount} = useScreenSize() 
   const showMenu = () => {
     setShow(!show);
   };
@@ -41,11 +42,13 @@ const Header = () => {
           >
             {navData.map((item) => (
               <li key={item.name} className="main_nav_list_li">
-               
+                
                 <NavLink to={item.path} onClick={handleLink} className={"main_nav_list_li_a"}>
                 <span className="main_nav_list_icons"  dangerouslySetInnerHTML={{ __html: item.icon }}></span>
                  <span>{item.name}</span> 
                 </NavLink>
+
+                {item.total && itemsCount  ? <span className="header_nav_cart_total_">{itemsCount}</span> : null}
               </li>
             ))}
           </ul>

@@ -27,6 +27,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* line-height: 1.4; */
 }
 html {
   font-size: 62.5%;
@@ -309,6 +310,20 @@ h2 {
   display: none;
 }
 
+.header_nav_cart_total_ {
+  /* border: 2px solid; */
+  position: absolute;
+  padding: 0.1rem 0.45rem 0.2rem;
+  top: -1.4rem;
+  right: -1.8rem;
+  background-color: rgb(252, 32, 99);
+  color: white;
+  border-radius: 9px 8px 8px 0px;
+  font-size: 1.3rem;
+  letter-spacing: 0.6px;
+  font-weight: bold;
+}
+
 /* Loading */
 .loading {
   display: flex;
@@ -452,22 +467,33 @@ h2 {
 .hero_text p {
   font-size: 2.1rem;
   color: #e6e6e6;
-  line-height: 3rem;
+  line-height: 2.5rem;
+  /* line-height: 2; */
   max-width: 33.2rem;
   word-wrap: break-word;
 }
+.hero_div {
+  /* border: 2px solid; */
+  /* padding: 0.4rem 0; */
+  margin-bottom: 1rem;
+}
 
+.hero_div p {
+  line-height: 1.8;
+  /* line-height: 2; */
+}
 .reserve_btn {
   display: block;
   font-size: 2rem;
   font-weight: 600;
   padding: 15px 20px;
-  border-radius: 16px;
+  border-radius: 10px;
   background-color: #f4ce14;
   border: none;
   outline: none;
   cursor: pointer;
   transition: var(--transition);
+  transition: 0.2s ease-in;
 }
 
 .reserve_btn:hover {
@@ -498,7 +524,7 @@ h2 {
 }
 
 .hero_Img:hover img {
-  transform: scale(1.04) rotate(1deg);
+  transform: scale(1.04);
 }
 
 /* Highlights section */
@@ -541,12 +567,15 @@ h2 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1.05fr;
-  row-gap: 1rem;
+  grid-template-rows: 1.1fr 1fr;
+  /* row-gap: 1rem; */
+  row-gap: 0.5rem;
   background-color: var(--clr-bg-2);
   overflow: hidden;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  flex: 1;
 }
 
 .specials_card_img {
@@ -559,6 +588,9 @@ h2 {
   width: 100%;
   height: 100%;
   transition: var(--transition);
+  aspect-ratio: 1.2 / 1;
+  /* aspect-ratio: 2 / 1; */
+  /* aspect-ratio: 1.4 / 1; */
 }
 
 .specials_card:hover .specials_card_img_img {
@@ -596,6 +628,8 @@ h2 {
   font-size: 1.6rem;
   color: #495e57;
   flex-grow: 1;
+  line-height: 1.65 !important;
+  /* line-height: 1.8 !important; */
 }
 
 .special_order_delivery {
@@ -608,6 +642,10 @@ h2 {
 
 .special_order_title {
   font-size: 1.6rem;
+  cursor: pointer;
+}
+.special_order_title:hover {
+  text-decoration: underline;
 }
 
 .special_order_delivery_button {
@@ -615,6 +653,52 @@ h2 {
   display: block;
   transform: translateY(0.3rem);
 }
+
+.specials_card_showmore{
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: rgb(18, 18, 189);
+  cursor: pointer;
+}
+
+.order_online_add_remove_btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:1.5rem;
+  font-size: 1.6rem;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+}
+.order_online_add_remove_btn button{
+  border: none;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  background-color: #dfdfdf;
+  transition: .1s ease;
+}
+.order_online_add_remove_btn span{
+ flex: 1;
+ transform: translateY(0) !important;
+
+ 
+ 
+}
+.order_online_add_remove_btn button:active{
+  background-color: black;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
 
 /* Testimonials */
 
@@ -686,6 +770,8 @@ h2 {
 
 .testi_text_content_blockquote {
   font-size: 1.6rem;
+  line-height: 1.6 ;
+  line-height: 1.65 ;
 }
 
 .testi_rating_section {
@@ -732,6 +818,7 @@ h2 {
   /* font-size: clamp(1.4rem, 3vh, 2rem); */
   font-weight: 500;
   line-height: 3.2rem;
+  line-height: 2;
   /* font-style: italic; */
   word-spacing: 0.7rem;
   color: rgba(0, 0, 0, 0.6);
@@ -887,11 +974,11 @@ h2 {
   padding: 0.5rem;
   margin-bottom: 1.6rem;
   cursor: pointer;
-  transition: var(--transition);
+  transition: 0.1s ease;
 }
 
 .footer_top_nav:hover {
-  opacity: 0.9;
+  filter: contrast(0.8);
 }
 
 .footer_top_nav_i {
@@ -946,6 +1033,8 @@ h2 {
 }
 .footer_navList li {
   font-size: 1.6rem;
+  /* padding: 0.4rem 0; */
+  padding: 0.3rem 0;
 }
 
 .footer_navList li a {
@@ -979,10 +1068,12 @@ h2 {
   }
 
   /* Specials Card*/
-  .specials_card {
+
+
+  /* .specials_card {
     width: 24rem;
     row-gap: 0.5rem;
-  }
+  } */
 
   /* Testimonials */
 
@@ -1011,8 +1102,7 @@ h2 {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     overflow: hidden;
-    color: rgba(0, 0, 0, .7);
-    
+    color: rgba(0, 0, 0, 0.7);
   }
 
   .main_nav_list {
@@ -1066,7 +1156,7 @@ h2 {
     right: 0;
   }
   .main_nav_list_li {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin: 2rem 0;
   }
 
@@ -1138,7 +1228,7 @@ h2 {
     box-shadow: none;
     position: relative;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1.2fr;
     grid-template-rows: auto;
   }
 
@@ -1172,12 +1262,21 @@ h2 {
   .specials_card_img img {
     width: 100%;
   }
+ 
+  .specials_card_img_img {
+    /* aspect-ratio: 1.35 / 1; */
+    aspect-ratio: 1.55 / 1;
+  }
+
+
 
   .special_order_delivery {
     margin-top: 1rem;
     margin-bottom: 0;
   }
-
+  .specials_card:hover .specials_card_img_img {
+    transform: none;
+  }
   /* Testimonials */
 
   .testimonial_section {
@@ -1222,7 +1321,7 @@ h2 {
 
   .testi_text_content_blockquote {
     font-size: 1.26rem;
-    line-height: 1.5;
+    /* line-height: 1.5; */
   }
 
   .testi_rating_section_i {
@@ -1254,15 +1353,19 @@ h2 {
 
   .about_text_content_header_h1 {
     font-size: 2.5rem;
+    /* border: 2px solid; */
+    margin-top: 0.5rem;
   }
 
   .about_text_content_header_h2 {
     font-size: 1.8rem;
+    margin-top: 0.2rem;
   }
   .about_text_content p {
-    font-size: 1.5rem;
-    font-style: italic;
+    font-size: 1.54rem;
+    /* font-style: italic; */
     font-weight: 500;
+    letter-spacing: 0.5px;
   }
 
   .about_image_content {
@@ -1314,7 +1417,9 @@ h2 {
     overflow: hidden;
     border-radius: 1rem;
   }
-
+  .hero_div p {
+    line-height: 2;
+  }
   /* About */
 
   .about_section {
@@ -1439,7 +1544,6 @@ h2 {
   .hero_div p {
     font-size: 1.4rem;
     flex: 1;
-    line-height: 2.5rem;
   }
 
   .hero_div .hero_Img {
@@ -1491,6 +1595,12 @@ h2 {
   .special_order_title {
     font-size: 1.4rem;
   }
+
+  .specials_card_img_img {
+    aspect-ratio: 1.35 / 1;
+  }
+
+
 
   /* Testimonials */
 

@@ -255,8 +255,17 @@
   .order_online_image-wrapper {
     height: clamp(100px, 32vw, 200px);
   }
-}
 
+  /* .order_online_card_main:hover{
+    box-shadow: rgba(50, 50, 93, 0.1) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.1) 0px 8px 16px -8px;
+} */
+  
+
+
+
+
+}
 @media screen and (max-width: 500px) {
   .order_online_header_p {
     font-size: 2rem;
@@ -359,7 +368,30 @@
   .order_online_rating_i {
     font-size: 1rem;
   }
+
+
+  .order_online_add_remove_btn{
+    font-size: 1.4rem;
+  }
+  .order_online_add_remove_btn button{
+    font-size: 1.1rem;
+  }
+
+
+
+
 }
+
+@media screen and (max-width: 400px) {
+  .order_online_add_remove_btn{
+    font-size: 1.25rem;
+  }
+  .order_online_add_remove_btn button{
+    font-size: 1rem;
+  }
+
+}
+
 
 @media screen and (max-width: 330px) {
   .order_online_card_container {
@@ -371,4 +403,8 @@
   .order_online_card_content img {
     height: clamp(165px, 60vw, 200px);
   }
+ 
+  
+  
+
 }

@@ -4,10 +4,21 @@ import { useScreenSize } from "../customHooks/ScreenSizeContext";
 import { useParams } from "react-router-dom";
 import { MdFastfood } from "react-icons/md";
 import fooditems from "../utils/foodItems";
+
 const SingleComponent = () => {
   const params = useParams();
   const { screenWidth } = useScreenSize();
   const [data, setData] = useState([]);
+
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  if (document.readyState === "complete") {
+    setTimeout(() => {
+      handleScrollToTop();
+    }, 300);
+  }
 
   const filterItems = fooditems.find(
     (item) => item.id.toString() === params.id
