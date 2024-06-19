@@ -32,19 +32,9 @@ const Card = ({ id, midImg, heading, price, description }) => {
             alt={heading}
           />
         </Link>
-        {/* {screenWidth <= 768 && (
-          <button
-            className="specials_card_img_button _BTN_"
-            onClick={() => {
-              addItems(price, id);
-            }}
-          >
-            Add +
-          </button>
-        )} */}
         {screenWidth <= 768 &&
           (itemCount > 0 ? (
-            <div className="order_online_add_remove_btn">
+            <div className="order_online_add_remove_btn_in_card">
               <button
                 className=""
                 onClick={() => {
@@ -75,10 +65,18 @@ const Card = ({ id, midImg, heading, price, description }) => {
           ))}
       </figure>
       <section className="specials_card_content">
-        <header className="specials_card_heading_price _flex_box" style={showmore ? {marginBottom:"1rem"} : {}}>
-          <h3 className="specials_card_title" style={showmore ? {fontSize:"1.5rem"} : {}}>{heading}</h3>
-          <span className="specials_card_price">₹ {price}</span>  
-        </header>  
+        <header
+          className="specials_card_heading_price _flex_box"
+          style={showmore ? { marginBottom: "1rem" } : {}}
+        >
+          <h3
+            className="specials_card_title"
+            style={showmore ? { fontSize: "1.5rem" } : {}}
+          >
+            {heading}
+          </h3>
+          <span className="specials_card_price">₹ {price}</span>
+        </header>
 
         <p className="specials_card_desc">
           {screenWidth >= 768 ? (
@@ -86,8 +84,7 @@ const Card = ({ id, midImg, heading, price, description }) => {
               {showmore ? description : description.substring(0, 80)}
 
               <span className="specials_card_showmore" onClick={handleShowMore}>
-                {showmore ? "Showless" :"Showmore"}
-                 
+                {showmore ? "Showless" : "Showmore"}
               </span>
             </>
           ) : screenWidth <= 600 ? (
@@ -95,25 +92,21 @@ const Card = ({ id, midImg, heading, price, description }) => {
           ) : (
             description
           )}
-          {/* {screenWidth <= 500
-          
-           
-            ? `${description.substring(0, 80)} ...`
-            : description} */}
         </p>
-       {!showmore && <div className="special_order_delivery">
-          <h2
-            className="special_order_title"
-            onClick={() => navigate("/orderonline")}
-          >
-            Order a delivery
-          </h2>
-         
-          <button className="special_order_delivery_button">
-            <i className="fa-solid fa-car-side"></i>
-          </button>
-        </div>}
-        
+        {!showmore && (
+          <div className="special_order_delivery">
+            <h2
+              className="special_order_title"
+              onClick={() => navigate("/orderonline")}
+            >
+              Order a delivery
+            </h2>
+
+            <button className="special_order_delivery_button">
+              <i className="fa-solid fa-car-side"></i>
+            </button>
+          </div>
+        )}
       </section>
     </article>
   );

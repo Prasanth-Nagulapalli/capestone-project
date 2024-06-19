@@ -5,7 +5,6 @@ import FormOne from "./Form_one";
 import FormTwo from "./Form_two";
 import ConfirmCard from "./ConfirmCard";
 
-
 const Reservations = () => {
   const [flag, setFlag] = useState(true);
 
@@ -151,8 +150,23 @@ const Reservations = () => {
 
   return (
     <section className={main_reservations_container}>
-      {confirmFlag && <ConfirmCard />}
-      {/* {true && <ConfirmCard />} */}
+      {/* {confirmFlag && <ConfirmCard />} */}
+      
+      {confirmFlag && (
+        <section
+          style={{
+            background: "rgba(0, 0, 0, 0.25)",
+            top: "0",
+            position: "fixed",
+            width: "100vw",
+            height: "100vh",
+            zIndex: "500",
+          }}
+        >
+          <ConfirmCard />
+        </section>
+      )}
+
       <section className={reservation_form_container}>
         {flag ? (
           <FormOne

@@ -7,14 +7,8 @@ import "../styles/cart.css";
 import { randomRange } from "../utils/functions";
 
 const Cart = () => {
-  const {
-    totalPrice,
-    deleteItems,
-    addItems,
-    list,
-    itemsCount,
-    tip,
-  } = useScreenSize();
+  const { totalPrice, deleteItems, addItems, list, itemsCount, tip } =
+    useScreenSize();
 
   const [grandtot, setGrandtot] = useState(0);
 
@@ -304,7 +298,10 @@ const PlaceOrderConfirmComponent = () => {
             : "place_order_confirm_compo"
         }
       >
-        <div className="place_order_content_container" style={show ? null : {maxWidth:"386px"}}>
+        <div
+          className="place_order_content_container"
+          style={show ? null : { maxWidth: "386px" }}
+        >
           {show ? (
             <OrderConfirmed />
           ) : (

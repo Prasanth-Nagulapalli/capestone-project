@@ -136,12 +136,10 @@ const LoginForm = ({
   password,
   formErrors,
 }) => {
-  // const {email, password} = login
   return (
     <>
       <form className="login-form">
         <header>
-          {/* <h2 className="login-h2">LOG-IN</h2> */}
           <h2 className="login-h2">SIGN-IN</h2>
           <p className="login-para-please-enter">
             Please enter your login and password!
@@ -214,7 +212,6 @@ const SignUp = ({
     <>
       <form className="login-form">
         <header>
-          {/* <h2 className="login-h2">LOG-IN</h2> */}
           <h2 className="login-h2">SIGN-UP</h2>
           <p className="login-para-please-enter">
             Please enter your Details To SignUp!
@@ -257,7 +254,6 @@ const SignUp = ({
               {signUpErrors.passwordRenter || "\u00A0"}
             </p>
           </div>
-          {/* <p className="login-forgot-password">Forgot Password ?</p> */}
         </div>
 
         <div className="login-form-btn-container">

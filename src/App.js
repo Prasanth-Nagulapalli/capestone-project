@@ -2,7 +2,6 @@ import React, { Suspense, lazy, useEffect } from "react";
 import Loading from "./components/Loading";
 import Lenis from "@studio-freight/lenis";
 
-
 const Header = lazy(() => import("./components/Header"));
 const AppRoutes = lazy(() => import("./routes/AppRoutes"));
 const Footer = lazy(() => import("./components/Footer"));
@@ -24,7 +23,6 @@ const App = () => {
       <Suspense fallback={<Loading />}>
         <Header />
         <AppRoutes />
-        {/* <SingleComponent /> */}
         <Footer />
       </Suspense>
     </>

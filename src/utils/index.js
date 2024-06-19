@@ -24,7 +24,6 @@ export const min = "/assets/2kb.jpg";
 
 //2kb images
 
-
 export const Greeksalad_min_2kb = "/minAssets/greek_salad_2kb.jpg";
 export const LemonDessert_min_2kb = "/minAssets/lemon dessert_2kb.jpg";
 export const bruchetta_min_2kb = "/minAssets/bruchetta_2kb.jpg";
@@ -46,10 +45,7 @@ export const poori_min_2kb = "/minAssets/poori_2kb.jpg";
 export const vada_min_2kb = "/minAssets/vada_2kb.jpg";
 export const min_min_2kb = "/minAssets/2kb_2kb.jpg";
 
-
 // mid images
-
-
 
 export const HeroImg_mid = "/midAssets/HeroImage_mid.jpg";
 export const Greeksalad_mid = "/midAssets/greek_salad_mid.jpg";
@@ -79,4 +75,3 @@ export const onion_ravva_mid = "/midAssets/onion_ravva_mid.jpg";
 export const plain_dosa_mid = "/midAssets/plain_dosa_mid.jpg";
 export const poori_mid = "/midAssets/poori_mid.jpg";
 export const vada_mid = "/midAssets/vada_mid.jpg";
-

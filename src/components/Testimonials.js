@@ -14,6 +14,7 @@ const Testimonials = () => {
   );
 };
 export default Testimonials;
+
 const Testimonial = ({ id, name, midImg, review }) => {
   return (
     <article className="testi_card" key={id}>

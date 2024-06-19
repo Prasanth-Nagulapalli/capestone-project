@@ -179,11 +179,6 @@ const ScreenSizeProvider = ({ children }) => {
     setDiscountFlag(false);
   };
 
-  // const handleRemovediscount = useCallback(() => {
-  //   setTotalPrice((prev) => prev + getDiscount);
-  //   setRemoveDiscountFlag(false);
-  // }, [getDiscount]);
-
   const handleOrder = () => {
     setConfirmOrder(true);
   };

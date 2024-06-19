@@ -178,22 +178,16 @@ h2 {
 
 /* Shine */
 .image-wrapper {
-  /* height: 12rem;
-  width: 12rem; */
   border-radius: 6px;
   background-color: #ccc;
   display: flex;
   align-items: center;
-  /* text-align: center;
-  line-height: 1.6; */
 }
 .image-wrapper img {
   height: auto;
   max-width: 100%;
   object-fit: cover;
   filter: blur(4px);
-  /* filter: drop-shadow(2); */
-  /* backdrop-filter: blur(25px); */
   transition: 22s;
 }
 
@@ -222,10 +216,7 @@ h2 {
   -webkit-animation: shine 0.85s infinite; /* For Safari and Chrome */
   animation: shine 0.85s infinite;
 }
-/* .shine:hover::before, .shine:focus::before {
-  -webkit-animation: shine 0.85s;
-          animation: shine 0.85s;
-} */
+
 @-webkit-keyframes shine {
   100% {
     left: 125%;
@@ -311,7 +302,6 @@ h2 {
 }
 
 .header_nav_cart_total_ {
-  /* border: 2px solid; */
   position: absolute;
   padding: 0.1rem 0.45rem 0.2rem;
   top: -1.4rem;
@@ -353,8 +343,9 @@ h2 {
 .success-card {
   width: clamp(200px, 90%, 700px);
   background-color: rgba(16, 16, 16, 0.9);
-  background: linear-gradient(to top, #6a4cff, #20bdff, #a5fecb);
-  color: black;
+  background-color: #f9fcff;
+  background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
+  color: rgb(255, 255, 255);
   margin: auto;
   max-height: 250px;
   text-align: center;
@@ -414,12 +405,12 @@ h2 {
     transform: scale(1);
   }
   55% {
-    color: white;
+    color: black;
   }
   75% {
     transform: scale(1);
     opacity: 1;
-    color: white;
+    color: black;
   }
   80% {
     opacity: 0.2;
@@ -473,14 +464,11 @@ h2 {
   word-wrap: break-word;
 }
 .hero_div {
-  /* border: 2px solid; */
-  /* padding: 0.4rem 0; */
   margin-bottom: 1rem;
 }
 
 .hero_div p {
   line-height: 1.8;
-  /* line-height: 2; */
 }
 .reserve_btn {
   display: block;
@@ -568,7 +556,6 @@ h2 {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1.05fr;
   grid-template-rows: 1.1fr 1fr;
-  /* row-gap: 1rem; */
   row-gap: 0.5rem;
   background-color: var(--clr-bg-2);
   overflow: hidden;
@@ -589,8 +576,6 @@ h2 {
   height: 100%;
   transition: var(--transition);
   aspect-ratio: 1.2 / 1;
-  /* aspect-ratio: 2 / 1; */
-  /* aspect-ratio: 1.4 / 1; */
 }
 
 .specials_card:hover .specials_card_img_img {
@@ -629,7 +614,6 @@ h2 {
   color: #495e57;
   flex-grow: 1;
   line-height: 1.65 !important;
-  /* line-height: 1.8 !important; */
 }
 
 .special_order_delivery {
@@ -654,51 +638,39 @@ h2 {
   transform: translateY(0.3rem);
 }
 
-.specials_card_showmore{
+.specials_card_showmore {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   color: rgb(18, 18, 189);
   cursor: pointer;
 }
 
-.order_online_add_remove_btn{
+.order_online_add_remove_btn_in_card {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:1.5rem;
+  gap: 1.5rem;
   font-size: 1.6rem;
   border: 1px solid rgba(128, 128, 128, 0.2);
   border-radius: 5px;
   overflow: hidden;
   text-align: center;
 }
-.order_online_add_remove_btn button{
+.order_online_add_remove_btn_in_card button {
   border: none;
   padding: 0.4rem 0.6rem;
   cursor: pointer;
   background-color: #dfdfdf;
-  transition: .1s ease;
+  transition: 0.1s ease;
 }
-.order_online_add_remove_btn span{
- flex: 1;
- transform: translateY(0) !important;
-
- 
- 
+.order_online_add_remove_btn_in_card span {
+  flex: 1;
+  transform: translateY(0) !important;
 }
-.order_online_add_remove_btn button:active{
+.order_online_add_remove_btn_in_card button:active {
   background-color: black;
   color: white;
 }
-
-
-
-
-
-
-
-
-
 
 /* Testimonials */
 
@@ -770,8 +742,8 @@ h2 {
 
 .testi_text_content_blockquote {
   font-size: 1.6rem;
-  line-height: 1.6 ;
-  line-height: 1.65 ;
+  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .testi_rating_section {
@@ -815,11 +787,9 @@ h2 {
 
 .about_text_content_p {
   font-size: 2rem;
-  /* font-size: clamp(1.4rem, 3vh, 2rem); */
   font-weight: 500;
   line-height: 3.2rem;
   line-height: 2;
-  /* font-style: italic; */
   word-spacing: 0.7rem;
   color: rgba(0, 0, 0, 0.6);
 }
@@ -829,12 +799,6 @@ h2 {
   height: 100%;
 }
 
-/* .about_image_content figure img {
-  position: absolute;
-  object-fit: cover;
-  width: 272px;
-  height: 338px;
-} */
 .about_image_img {
   position: absolute;
   object-fit: cover;
@@ -988,11 +952,6 @@ h2 {
   color: #74c0fc;
 }
 
-/* .footer_top_nav p {
-  font-size: 1.1rem;
-  color: white;
-  text-transform: capitalize;
-} */
 .footer_back_to_top {
   font-size: 1.1rem;
   color: white;
@@ -1033,7 +992,6 @@ h2 {
 }
 .footer_navList li {
   font-size: 1.6rem;
-  /* padding: 0.4rem 0; */
   padding: 0.3rem 0;
 }
 
@@ -1069,12 +1027,6 @@ h2 {
 
   /* Specials Card*/
 
-
-  /* .specials_card {
-    width: 24rem;
-    row-gap: 0.5rem;
-  } */
-
   /* Testimonials */
 
   .testi_card {
@@ -1097,8 +1049,7 @@ h2 {
   }
   .main_nav_list_li_a {
     padding: 1rem 2rem;
-    /* border-top-right-radius: 2px; */
-    /* border-bottom-right-radius: 18px; */
+    letter-spacing: 1px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     overflow: hidden;
@@ -1122,7 +1073,6 @@ h2 {
     transition: 0.18s linear;
     box-shadow: rgba(17, 12, 46, 0.5) 0px 48px 5px 0px;
     overflow: hidden;
-    /* backdrop-filter: blur(25px); */
   }
 
   .main_nav_list_icons {
@@ -1163,7 +1113,11 @@ h2 {
   .nav_bars i {
     display: block;
   }
-
+  .header_nav_cart_total_ {
+    padding: 0.25rem 0.5rem;
+    right: -2rem;
+    font-size: 1.4rem;
+  }
   /* Loading */
   .loading {
     align-items: normal;
@@ -1262,13 +1216,10 @@ h2 {
   .specials_card_img img {
     width: 100%;
   }
- 
+
   .specials_card_img_img {
-    /* aspect-ratio: 1.35 / 1; */
     aspect-ratio: 1.55 / 1;
   }
-
-
 
   .special_order_delivery {
     margin-top: 1rem;
@@ -1321,7 +1272,6 @@ h2 {
 
   .testi_text_content_blockquote {
     font-size: 1.26rem;
-    /* line-height: 1.5; */
   }
 
   .testi_rating_section_i {
@@ -1353,7 +1303,6 @@ h2 {
 
   .about_text_content_header_h1 {
     font-size: 2.5rem;
-    /* border: 2px solid; */
     margin-top: 0.5rem;
   }
 
@@ -1363,7 +1312,6 @@ h2 {
   }
   .about_text_content p {
     font-size: 1.54rem;
-    /* font-style: italic; */
     font-weight: 500;
     letter-spacing: 0.5px;
   }
@@ -1499,15 +1447,8 @@ h2 {
 
   .footer_navList li {
     font-size: 1.5rem;
-    padding: 0.2rem 0;
   }
 }
-
-/* @media screen and (max-width: 520px) {
-   .hero_text_h1{
-    font-size: 2.8rem;
-   }
-} */
 
 @media screen and (max-width: 500px) {
   .hero_article {
@@ -1600,8 +1541,6 @@ h2 {
     aspect-ratio: 1.35 / 1;
   }
 
-
-
   /* Testimonials */
 
   .testi_sec_center {
@@ -1651,7 +1590,15 @@ h2 {
   }
 
   .footer_navList li {
-    font-size: 1.3rem;
-    padding: 0.2rem 0;
+    font-size: 1.34rem;
+    padding: 0.4rem 0;
+  }
+
+  .footer_navList ul li:first-child {
+    padding-top: 0;
+  }
+
+  .footer_navList_ul {
+    margin-top: 0.4rem;
   }
 }

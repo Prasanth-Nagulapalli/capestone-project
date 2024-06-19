@@ -98,10 +98,7 @@
   background-color: black;
   color: white;
 }
-/* .order_online_filter_btn_container .current_btn {
-  background-color: black;
-  color: white;
-} */
+
 .order_online_card_container {
   padding: 2rem 0;
   display: flex;
@@ -147,7 +144,6 @@
   border-bottom-left-radius: 4px;
   object-fit: cover;
   aspect-ratio: 1 / 0.81;
-  /* height: clamp(120px, 25vw, 200px); */
 }
 
 .order_online_item_rating_container {
@@ -210,61 +206,44 @@
   font-size: 1.5rem;
 }
 
-.order_online_add_remove_btn{
-  /* border: 2px solid; */
+.order_online_add_remove_btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:1.5rem;
+  gap: 1.5rem;
   font-size: 1.6rem;
   border: 1px solid rgba(128, 128, 128, 0.2);
   border-radius: 5px;
   overflow: hidden;
 }
-.order_online_add_remove_btn button{
+.order_online_add_remove_btn button {
   border: none;
   padding: 0.4rem 0.6rem;
   cursor: pointer;
-  /* background-color: transparent; */
-  transition: .1s ease;
+  transition: 0.1s ease;
 }
-.order_online_add_remove_btn span{
- flex: 1;
- transform: translateY(-2px);
+.order_online_add_remove_btn span {
+  flex: 1;
+  transform: translateY(-2px);
 }
-.order_online_add_remove_btn button:active{
+.order_online_add_remove_btn button:active {
   background-color: black;
   color: white;
 }
 
-
-
 @media screen and (max-width: 686px) {
   .order_online_card_container {
-    /* display: flex; */
     flex-wrap: wrap;
-    /* gap: 0; */
   }
 
   .order_online_card_main {
     max-width: unset;
     width: 47%;
-    /* margin-bottom: 2rem; */
   }
   .order_online_card_content img,
   .order_online_image-wrapper {
     height: clamp(100px, 32vw, 200px);
   }
-
-  /* .order_online_card_main:hover{
-    box-shadow: rgba(50, 50, 93, 0.1) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.1) 0px 8px 16px -8px;
-} */
-  
-
-
-
-
 }
 @media screen and (max-width: 500px) {
   .order_online_header_p {
@@ -297,14 +276,8 @@
   }
 
   .order_online_filter_btn_container {
-    /* max-width: 655px; */
     padding: 0.8rem 0 0.1rem;
     margin: 1.2rem 0 0;
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow-x: scroll;
-    scrollbar-width: none; */
   }
 
   .order_online_filter_btn_container button {
@@ -369,29 +342,27 @@
     font-size: 1rem;
   }
 
-
-  .order_online_add_remove_btn{
+  .order_online_add_remove_btn {
     font-size: 1.4rem;
   }
-  .order_online_add_remove_btn button{
+  .order_online_add_remove_btn button {
     font-size: 1.1rem;
   }
 
-
-
-
+  .order_online_add_remove_btn span {
+    flex: 1;
+    transform: translateY(0);
+  }
 }
 
 @media screen and (max-width: 400px) {
-  .order_online_add_remove_btn{
+  .order_online_add_remove_btn {
     font-size: 1.25rem;
   }
-  .order_online_add_remove_btn button{
+  .order_online_add_remove_btn button {
     font-size: 1rem;
   }
-
 }
-
 
 @media screen and (max-width: 330px) {
   .order_online_card_container {
@@ -403,8 +374,4 @@
   .order_online_card_content img {
     height: clamp(165px, 60vw, 200px);
   }
- 
-  
-  
-
 }

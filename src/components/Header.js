@@ -5,10 +5,10 @@ import { NavLogo } from "../utils";
 import { navData } from "../utils/data";
 const Header = () => {
   const { screenSize } = useScreenSize();
-  const {screenWidth} = screenSize
+  const { screenWidth } = screenSize;
   const [show, setShow] = useState(true);
-  
-  const {itemsCount} = useScreenSize() 
+
+  const { itemsCount } = useScreenSize();
   const showMenu = () => {
     setShow(!show);
   };
@@ -16,7 +16,7 @@ const Header = () => {
   const handleLink = () => {
     setTimeout(() => {
       setShow(true);
-    },50)
+    }, 50);
   };
 
   return (
@@ -24,7 +24,12 @@ const Header = () => {
       <header className="main_nav_header" id="Home_Nav">
         <nav className="_flex_box _max_width_center main_nav_header_nav">
           <figure className="main_nav_logo">
-            <img loading="lazy" src={NavLogo} alt="Restaurant Logo" className="main_nav_logo_img" />
+            <img
+              loading="lazy"
+              src={NavLogo}
+              alt="Restaurant Logo"
+              className="main_nav_logo_img"
+            />
           </figure>
 
           <div className="nav_bars">
@@ -42,13 +47,30 @@ const Header = () => {
           >
             {navData.map((item) => (
               <li key={item.name} className="main_nav_list_li">
-                
-                <NavLink to={item.path} onClick={handleLink} className={"main_nav_list_li_a"}>
-                <span className="main_nav_list_icons"  dangerouslySetInnerHTML={{ __html: item.icon }}></span>
-                 <span>{item.name}</span> 
+                <NavLink
+                  to={item.path}
+                  onClick={handleLink}
+                  className={"main_nav_list_li_a"}
+                >
+                  <span
+                    className="main_nav_list_icons"
+                    dangerouslySetInnerHTML={{ __html: item.icon }}
+                  ></span>
+                  <span>{item.name}</span>
                 </NavLink>
 
-                {item.total && itemsCount  ? <span className="header_nav_cart_total_">{itemsCount}</span> : null}
+                {item.total && itemsCount ? (
+                  <span
+                    className="header_nav_cart_total_"
+                    style={
+                      itemsCount >= 10 && screenWidth <= 768
+                        ? { right: "-2.75rem" }
+                        : { right: "-2rem" }
+                    }
+                  >
+                    {itemsCount}
+                  </span>
+                ) : null}
               </li>
             ))}
           </ul>

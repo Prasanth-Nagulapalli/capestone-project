@@ -6,7 +6,7 @@ import { ReactTyped } from "react-typed";
 const Hero = () => {
   const { screenSize } = useScreenSize();
   const navigate = useNavigate();
-  const {screenWidth} = screenSize
+  const { screenWidth } = screenSize;
 
   return (
     <section className="hero_section">

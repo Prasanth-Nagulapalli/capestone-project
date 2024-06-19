@@ -1,10 +1,9 @@
 import confetti from "canvas-confetti";
 
-const  useConfetti =  () => {
+const useConfetti = () => {
   const count = 200;
   const defaults = {
     origin: { y: 0.7 },
-    
   };
 
   const fire = (particleRatio, opts) => {
