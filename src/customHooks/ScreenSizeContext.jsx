@@ -18,6 +18,8 @@ const ScreenSizeProvider = ({ children }) => {
     screenWidth: window.innerWidth,
     screenHeight: window.innerHeight,
   });
+  const [navbarHeight, setNavbarHeight] = useState(0);
+  const [footerHeight, setFooterHeight] = useState(0);
 
   const [totalPrice, setTotalPrice] = useState(0);
   const [ids, setIds] = useState([]);
@@ -227,6 +229,10 @@ const ScreenSizeProvider = ({ children }) => {
       handleOrderToFalse,
       handleOrderToOk,
       resetState,
+      navbarHeight,
+      setNavbarHeight,
+      footerHeight,
+      setFooterHeight,
     }),
     [
       screenSize,
@@ -246,6 +252,10 @@ const ScreenSizeProvider = ({ children }) => {
       removeDiscountFlag,
       handleRemovediscount,
       confirmOrder,
+      navbarHeight,
+      setNavbarHeight,
+      footerHeight,
+      setFooterHeight,
     ]
   );
 

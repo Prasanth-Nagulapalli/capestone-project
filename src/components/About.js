@@ -4,7 +4,7 @@ import { rest1_mid, rest2_mid } from "../utils";
 const About = () => {
   return (
     <section className="about_section _max_width_center">
-      <section className="about_text_content">
+      <section className="about_text_content" >
         <header>
           <h1 className="about_text_content_header_h1">Little Lemon</h1>
           <h2 className="about_text_content_header_h2">Chicago</h2>

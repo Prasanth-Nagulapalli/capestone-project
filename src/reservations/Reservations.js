@@ -4,8 +4,9 @@ import { littleLemon, HeroImg_mid, rest3_mid, rest_chef_mid } from "../utils";
 import FormOne from "./Form_one";
 import FormTwo from "./Form_two";
 import ConfirmCard from "./ConfirmCard";
-
+import { useScreenSize } from "../customHooks/ScreenSizeContext";
 const Reservations = () => {
+  const { navbarHeight, footerHeight } = useScreenSize();
   const [flag, setFlag] = useState(true);
 
   const [confirmFlag, setConfirmFlag] = useState(false);
@@ -149,7 +150,7 @@ const Reservations = () => {
   };
 
   return (
-    <section className={main_reservations_container}>
+    <section className={main_reservations_container} style={{minHeight:`calc(100vh - ${navbarHeight + footerHeight}px)`}}>
       {/* {confirmFlag && <ConfirmCard />} */}
       
       {confirmFlag && (

@@ -1,13 +1,39 @@
-import React from "react";
+import React,{ useEffect} from "react";
 import { Link } from "react-router-dom";
 import { footerImg, NavLogo } from "../utils";
 import { useScreenSize } from "../customHooks/ScreenSizeContext";
 const Footer = () => {
-  const { screenSize } = useScreenSize();
+  const { screenSize,setFooterHeight } = useScreenSize();
   const { screenWidth } = screenSize;
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+ 
+  useEffect(() => {
+    const handleResize = () => {
+      const footer = document.querySelector(".footer_sec");
+      if (footer) {
+        const height = footer.getBoundingClientRect().height;
+        setFooterHeight(height);
+        
+      }
+    };
+
+    // Initial call on mount
+    handleResize();
+
+    // Event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [setFooterHeight]);
+
+
+
 
   return (
     <footer className="footer_sec">

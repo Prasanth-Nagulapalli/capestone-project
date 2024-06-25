@@ -169,6 +169,7 @@ const CouponCard = () => {
 
 const Footer2 = ({ grandtot }) => {
   const { tip, totalPrice, minusTip, addTip } = useScreenSize();
+
   return (
     <>
       <div className="cart_footer_2">
@@ -189,17 +190,27 @@ const Footer2 = ({ grandtot }) => {
           <div className="cart_add_tip_div">
             <h3>Add Tip :</h3>
             <h3 className="cart_add_tip_h3">
-              <span>{tip}</span>
+              <span className="cart_tip_btn_container">
+                <button onClick={minusTip}>-</button>
+                <span className="cart_tip_span">{tip}</span>
+                <button onClick={addTip}>+</button>
+              </span>
+            </h3>
+            {/* <h3 className="cart_add_tip_h3">
+              <span className="cart_tip_span">{tip}</span>
               <span
                 className="cart_tip_btn_container"
-                style={{
-                  left: tip < 10 ? "-4rem" : tip < 100 ? "-3.5rem" : "-3.1rem",
-                }}
+                // style={{
+                //   left: tip < 10 ? "-4rem" : tip < 100 ? "-3.5rem" : "-3.1rem",
+                // }}
+                // style={{
+                //   left: tip < 10 ? "-4rem" : tip < 100 ? "-3.5rem" : "-3.1rem",
+                // }}
               >
                 <button onClick={minusTip}>-</button>
                 <button onClick={addTip}>+</button>
               </span>
-            </h3>
+            </h3> */}
           </div>
         </div>
         <section className="cart_footer_grand_total">

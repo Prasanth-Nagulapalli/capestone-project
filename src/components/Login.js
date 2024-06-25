@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { useScreenSize } from "../customHooks/ScreenSizeContext";
 const Login = () => {
   const navigate = useNavigate();
+  const { navbarHeight, footerHeight } = useScreenSize();
   const [flag, setFlag] = useState(false);
   const [success, setIsSuccess] = useState(false);
   const [loginSuccess, setIsLoginSuccess] = useState(false);
@@ -102,7 +103,10 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
+    <div
+      className="login-container"
+      style={{ minHeight: `calc(100vh - ${navbarHeight + footerHeight}px)` }}
+    >
       {success && <Success type={"Sign Up"} page={"Login"} />}
       {loginSuccess && <Success type={"Log-In"} page={"Reservations"} />}
       {flag ? (

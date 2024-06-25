@@ -1,12 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useScreenSize } from "../customHooks/ScreenSizeContext";
 import { NavLink } from "react-router-dom";
 import { NavLogo } from "../utils";
 import { navData } from "../utils/data";
 const Header = () => {
-  const { screenSize } = useScreenSize();
+  const { screenSize, setNavbarHeight } = useScreenSize();
   const { screenWidth } = screenSize;
   const [show, setShow] = useState(true);
+  // const [navHeight, setNavHeight] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const navBar = document.querySelector(".main_nav_header");
+      if (navBar) {
+        const height = navBar.getBoundingClientRect().height;
+        setNavbarHeight(height);
+      }
+    };
+
+    // Initial call on mount
+    handleResize();
+
+    // Event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [setNavbarHeight]);
 
   const { itemsCount } = useScreenSize();
   const showMenu = () => {
