@@ -1088,10 +1088,11 @@ h2 {
     align-items: flex-start;
     gap: 0.5rem;
     position: fixed;
-    right: -250rem;
+    right: -750px;
     top: 5.4538rem;
     z-index: 99;
     transition: 0.18s linear;
+    transition: 0.3s ease-in-out;
     box-shadow: rgba(17, 12, 46, 0.5) 0px 48px 5px 0px;
     overflow: hidden;
   }
@@ -1124,7 +1125,7 @@ h2 {
     background-color: rgba(0, 0, 0, 0.8);
   }
   .showMenu {
-    right: 0;
+    right: 0 !important;
   }
   .main_nav_list_li {
     font-size: 1.6rem;
@@ -1473,6 +1474,9 @@ h2 {
 }
 
 @media screen and (max-width: 500px) {
+  .main_nav_list {
+    right: -350px;
+  }
   .hero_article {
     display: flex;
     flex-direction: column;
