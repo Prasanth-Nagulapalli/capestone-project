@@ -7,7 +7,7 @@ import fooditems from "../utils/foodItems";
 
 const SingleComponent = () => {
   const params = useParams();
-  const { screenWidth } = useScreenSize();
+  const { screenWidth, navbarHeight, footerHeight } = useScreenSize();
   const [data, setData] = useState([]);
 
   const handleScrollToTop = () => {
@@ -33,14 +33,17 @@ const SingleComponent = () => {
   const { img, title, price, type, rating } = data;
 
   return (
-    <main className="single_component_main _max_width_center">
+    <main
+      className="single_component_main _max_width_center"
+      style={{ minHeight: `calc(100vh - ${navbarHeight + footerHeight}px)` }}
+    >
       <div className="single_component_container">
         <section className="single_component_img_container">
           <figure>
             <img src={img} alt={title} />
           </figure>
         </section>
-        <section className="single_component_content_container">
+        <section className="single_component_content_container max_center">
           <h2 className="single_component_item_name">
             <MdFastfood className="single_component_item_icon" /> {title}
           </h2>

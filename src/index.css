@@ -535,6 +535,8 @@ h2 {
   padding: 1.4rem 2.2rem;
   background-color: black;
   color: white;
+  letter-spacing: 1px;
+  border-radius: 2px;
 }
 .highlight_btn:hover {
   filter: opacity(0.7) brightness(0.9);
@@ -745,7 +747,7 @@ h2 {
   font-size: 1.6rem;
   line-height: 1.6;
   line-height: 1.65;
-  letter-spacing: .6px;
+  letter-spacing: 0.6px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
@@ -798,6 +800,10 @@ h2 {
   line-height: 2;
   word-spacing: 0.7rem;
   color: rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+  overflow: hidden;
 }
 
 .about_image_content {
@@ -810,6 +816,11 @@ h2 {
   object-fit: cover;
   width: 272px;
   height: 338px;
+  /* max-width: 272px;
+  max-height: 338px;
+  width: 55%;
+  height: 65%; */
+  /* aspect-ratio: 2/1; */
 }
 
 .about_fig1 {

@@ -2,6 +2,9 @@
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
   min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .single_component_container {
@@ -37,8 +40,9 @@
 }
 
 .single_component_content_para p {
-  font-size: 17px;
-  font-size: clamp(15px, 4vw, 17px);
+  /* font-size: clamp(15px, 4vw, 17px);
+  font-size: clamp(20px, 4vw, 25px); */
+  font-size: 2rem;
   margin: 1rem 0;
   line-height: 1.9;
   color: rgb(0, 0, 0, 0.8);
@@ -46,6 +50,10 @@
   text-align: justify;
   letter-spacing: 0.15px;
   word-spacing: 0.2rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 9;
+  overflow: hidden;
 }
 
 .single_component_content_details {
@@ -102,12 +110,24 @@
 }
 
 @media screen and (max-width: 720px) {
+  .single_component_main {
+    width: 100%;
+  }
+  .single_component_content_container.max_center {
+    width: 95%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
   .single_component_container {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
   .single_component_content_details_container.small_size {
     width: 100%;
+  }
+  .single_component_img_container figure img {
+    margin-top: 0rem;
   }
 }
 
@@ -119,12 +139,13 @@
     margin-top: 0;
   }
   .single_component_img_container figure img {
-    margin-top: 0rem;
+    /* margin-top: 0rem; */
     max-height: 350px;
   }
 
   .single_component_content_para p {
     color: rgba(0, 0, 0, 0.5);
+    font-size: 1.6rem;
   }
   .single_component_content_details {
     margin-top: 1rem;
