@@ -1475,7 +1475,7 @@ h2 {
 
 @media screen and (max-width: 500px) {
   .main_nav_list {
-    right: -350px;
+    right: -400px;
   }
   .hero_article {
     display: flex;
